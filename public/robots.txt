@@ -1,4 +1,33 @@
 User-agent: *
 Allow: /
 
+# AI search crawlers — explicitly allowed for citation and indexing
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+# Training crawlers — blocked (not for AI training, only for search/citation)
+User-agent: CCBot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
 Sitemap: https://senexsolar.pages.dev/sitemap-index.xml

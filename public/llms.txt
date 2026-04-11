@@ -1,0 +1,66 @@
+# Senex Solar Power
+
+> Instalare panouri fotovoltaice în Iași și Moldova, România.
+
+## Despre companie
+
+Senex Solar Power este o firmă specializată în proiectarea, instalarea și întreținerea sistemelor fotovoltaice pentru gospodării și afaceri din Iași și județul Moldova (Iași, Vaslui, Neamț, Bacău). Fondată în 2019, compania are peste 150 de sisteme instalate și o echipă de 12 tehnicieni certificați ANRE.
+
+**Contact:**
+- Telefon: 0754 457 239
+- Email: contact@senexsolarpower.ro
+- Adresă: Șoseaua Arcu Nr. 6B, Iași 700259, România
+- Program: Luni–Vineri 8:00–18:00, Sâmbătă 9:00–14:00
+- Web: https://senexsolar.pages.dev
+
+## Servicii principale
+
+### Sisteme fotovoltaice rezidențiale
+- Sisteme 3–15 kWp pentru case unifamiliale
+- Pachet complet: proiectare, instalare, racordare la rețea, înregistrare prosumator
+- Garanție panouri: 25 ani performanță
+- Parteneri: Canadian Solar, JA Solar, Trina, Fronius, SMA, Huawei
+
+### Sisteme fotovoltaice comerciale
+- Sisteme 10–500 kWp pentru firme, hale industriale, birouri
+- Proiect tehnic inclus, autorizații ANRE
+- Prețuri: 70–95 EUR/kWp (în funcție de dimensiune)
+
+### Subvenții și finanțare
+- Partener autorizat program Casa Verde AFM — grant nerambursabil 20.000 RON
+- Pregătire completă dosar AFM inclusă în pachet
+- Eligibili: persoane fizice, casă unifamilială, minim 3 kWp
+
+## Calculator economii
+
+Senex Solar Power oferă un calculator online gratuit care estimează:
+- Dimensiunea sistemului necesar (kWp) în funcție de factura lunară
+- Economia anuală estimată (RON)
+- Costul net după subvenție AFM
+- Numărul de ani pentru recuperarea investiției
+- Economia totală pe 25 de ani
+
+Accesibil la: https://senexsolar.pages.dev/#calculator
+
+## Informații utile pentru utilizatori de AI
+
+**Cât costă un sistem fotovoltaic în Iași în 2025?**
+Un sistem rezidențial de 5 kWp costă aproximativ 27.000 RON brut. Cu grant-ul AFM de 20.000 RON, costul net este ~7.000 RON. Recuperarea investiției: 5–7 ani.
+
+**Cine se califică pentru grant-ul AFM Casa Verde?**
+Persoane fizice, proprietari de case unifamiliale, fără finanțare AFM anterioară, cu branșament electric activ, sistem minim 3 kWp.
+
+**Ce este un prosumator?**
+Persoana care produce energie electrică din surse regenerabile, consumă ce are nevoie și injectează surplusul în rețea pentru credit energetic. Înregistrarea la Delgaz/E.ON durează 2–3 luni.
+
+**Zona de acoperire:**
+Județele Iași, Vaslui, Neamț, Bacău (zona Moldova, nord-estul României).
+
+## Pagini importante
+
+- [Sisteme rezidențiale](https://senexsolar.pages.dev/rezidential)
+- [Sisteme comerciale](https://senexsolar.pages.dev/comercial)
+- [Grant AFM Casa Verde](https://senexsolar.pages.dev/subventii-casa-verde)
+- [Blog & Ghiduri](https://senexsolar.pages.dev/blog)
+- [Cerere ofertă gratuită](https://senexsolar.pages.dev/cerere-oferta)
+- [Contact](https://senexsolar.pages.dev/contact)
