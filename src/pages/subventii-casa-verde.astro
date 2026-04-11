@@ -1,0 +1,280 @@
+---
+export const prerender = true;
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import WhatsAppButton from '../components/layout/WhatsAppButton.astro';
+import ContactCTA from '../components/sections/ContactCTA.astro';
+---
+
+<BaseLayout
+  title="Grant Casa Verde AFM 2025 — Panouri Solare"
+  description="Cum obții grant-ul AFM de 20.000 RON pentru panouri solare prin programul Casa Verde Fotovoltaice. Ghid complet pas cu pas, condiții eligibilitate, documente necesare."
+>
+  <Header />
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Programul Casa Verde AFM</span>
+        <h1 class="page-h1 font-display">
+          20.000 RON nerambursabili<br />
+          <span class="accent">pentru panouri solare.</span>
+        </h1>
+        <p class="page-sub">
+          Ghid complet: cum funcționează programul, cine se califică și cum te ajutăm
+          să obții finanțarea fără bătăi de cap.
+        </p>
+        <a href="#verificare" class="cta-primary">Verifică dacă te califici</a>
+      </div>
+    </section>
+
+    <!-- What is AFM -->
+    <section class="section">
+      <div class="container content-narrow">
+        <h2 class="section-title font-display animate-on-scroll">Ce este programul Casa Verde?</h2>
+        <p class="section-text animate-on-scroll">
+          Programul Casa Verde Fotovoltaice este inițiat de Administrația Fondului pentru Mediu (AFM)
+          și finanțat de Guvernul României. Scopul său este să sprijine tranziția energetică prin
+          subvenționarea instalării de sisteme fotovoltaice pentru gospodăriile private.
+        </p>
+        <p class="section-text animate-on-scroll">
+          Finanțarea este <strong>nerambursabilă</strong> — nu trebuie să returnezi banii.
+          Suma maximă este de <strong>20.000 RON</strong> per gospodărie.
+        </p>
+
+        <div class="highlight-box animate-on-scroll">
+          <div class="highlight-num font-display">20.000 RON</div>
+          <div class="highlight-label">grant nerambursabil per gospodărie</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eligibility -->
+    <section class="section bg-beige" id="verificare">
+      <div class="container content-narrow">
+        <h2 class="section-title font-display animate-on-scroll">Condiții de eligibilitate.</h2>
+
+        <div class="eligibility-grid animate-on-scroll">
+          {[
+            { ok: true, text: 'Ești persoană fizică (nu firmă sau PFA)' },
+            { ok: true, text: 'Ești proprietar al casei (act de proprietate pe numele tău)' },
+            { ok: true, text: 'Casa ta este o locuință unifamilială (casă la sol, nu apartament la bloc)' },
+            { ok: true, text: 'Nu ai mai beneficiat de finanțare AFM anterior' },
+            { ok: true, text: 'Casa are branșament electric activ' },
+            { ok: true, text: 'Sistemul instalat are minim 3 kWp putere' },
+            { ok: false, text: 'Nu se aplică pentru apartamente la bloc' },
+            { ok: false, text: 'Nu se aplică dacă ai beneficiat deja de Casa Verde' },
+          ].map(item => (
+            <div class={`elig-item ${item.ok ? 'ok' : 'no'}`}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                {item.ok
+                  ? <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  : <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                }
+              </svg>
+              {item.text}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Step by step -->
+    <section class="section">
+      <div class="container content-narrow">
+        <h2 class="section-title font-display animate-on-scroll">Cum funcționează — pas cu pas.</h2>
+        <p class="section-text animate-on-scroll">Noi ne ocupăm de toți pașii. Trebuie doar să semnezi documentele.</p>
+
+        <div class="steps animate-on-scroll">
+          {[
+            { n: '1', title: 'Analiza gratuită', desc: 'Venim la tine, evaluăm casa și consumul, confirmăm eligibilitatea AFM.' },
+            { n: '2', title: 'Pregătim dosarul', desc: 'Echipa noastră pregătește toate documentele: cerere AFM, proiect tehnic, contract, acte proprietate.' },
+            { n: '3', title: 'Depunere dosar', desc: 'Depunem dosarul în sistemul AFM. Așteptăm aprobarea (de obicei 30–60 zile).' },
+            { n: '4', title: 'Instalare sistem', desc: 'La aprobarea dosarului, instalăm sistemul fotovoltaic. Durează 1–2 zile.' },
+            { n: '5', title: 'Recepție și plată', desc: 'AFM verifică instalarea și virează suma aprobată direct în contul tău.' },
+            { n: '6', title: 'Energie gratuită', desc: 'Ești prosumator. Facturile scad cu 70–100%. Garanție 25 ani.' },
+          ].map(s => (
+            <div class="step-item">
+              <div class="step-num font-display">{s.n}</div>
+              <div class="step-content">
+                <h3 class="step-title">{s.title}</h3>
+                <p class="step-desc">{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Documents needed -->
+    <section class="section bg-beige">
+      <div class="container content-narrow">
+        <h2 class="section-title font-display animate-on-scroll">Documente necesare.</h2>
+        <p class="section-text animate-on-scroll">
+          Le pregătim noi în mare parte — tu furnizezi doar actele personale și de proprietate.
+        </p>
+        <ul class="docs-list animate-on-scroll">
+          {[
+            'Copie CI / pașaport',
+            'Extras de carte funciară (îl obținem noi)',
+            'Copie factură electrică recentă',
+            'Cerere tip AFM (o completăm noi)',
+            'Proiect tehnic (îl facem noi)',
+            'Contract instalare (îl semnezi tu)',
+          ].map(doc => (
+            <li class="doc-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#1E6B3A" aria-hidden="true"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+              {doc}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <ContactCTA />
+  </main>
+  <Footer />
+  <WhatsAppButton />
+</BaseLayout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #1E6B3A 0%, #164f2b 100%);
+    padding-block: 5rem 4rem;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 0.75rem;
+  }
+
+  .page-h1 {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-weight: 400;
+    color: white;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+    max-width: 660px;
+  }
+
+  .accent { color: #F5A623; }
+
+  .page-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    max-width: 540px;
+  }
+
+  .cta-primary {
+    display: inline-flex;
+    background: #F5A623;
+    color: #1A1A1A;
+    font-weight: 700;
+    padding: 0.875rem 1.75rem;
+    border-radius: 8px;
+    transition: background 0.15s, transform 0.15s;
+  }
+
+  .cta-primary:hover { background: #d4891a; transform: translateY(-2px); }
+
+  .section { padding-block: 5rem; }
+  .bg-beige { background: #F7F6F2; }
+
+  .content-narrow { max-width: 760px; }
+
+  .section-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 400;
+    color: #1A1A1A;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    margin-bottom: 1rem;
+  }
+
+  .section-text { color: #4A4A4A; line-height: 1.7; margin-bottom: 1rem; }
+
+  .highlight-box {
+    background: #1E6B3A;
+    color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .highlight-num { font-size: 3rem; color: #F5A623; line-height: 1; }
+  .highlight-label { font-size: 0.9rem; color: rgba(255,255,255,0.75); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  .eligibility-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .elig-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .elig-item.ok { background: rgba(30,107,58,0.08); color: #1E6B3A; }
+  .elig-item.no { background: rgba(192,57,43,0.07); color: #c0392b; }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 1.5rem;
+    border-left: 2px solid #E2E0D8;
+    padding-left: 0;
+  }
+
+  .step-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.25rem 0 1.25rem 1.5rem;
+    position: relative;
+  }
+
+  .step-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 1.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #1E6B3A;
+  }
+
+  .step-num { font-size: 1.5rem; color: rgba(30,107,58,0.25); line-height: 1.4; min-width: 24px; }
+  .step-title { font-size: 1rem; font-weight: 700; color: #1A1A1A; margin-bottom: 0.25rem; }
+  .step-desc { font-size: 0.875rem; color: #6B6B6B; line-height: 1.6; }
+
+  .docs-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1.5rem; }
+
+  .doc-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: #2A2A2A;
+    padding: 0.75rem 1rem;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #E2E0D8;
+  }
+</style>

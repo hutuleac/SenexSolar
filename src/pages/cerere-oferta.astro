@@ -1,0 +1,214 @@
+---
+export const prerender = true;
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ContactForm } from '../components/islands/ContactForm';
+import { SITE } from '../lib/constants';
+---
+
+<BaseLayout
+  title="Cerere Ofertă Gratuită — Panouri Solare Iași"
+  description="Solicită o ofertă gratuită pentru panouri solare. Analiza completă, fără obligații. Echipa Senex Solar Power răspunde în 24h."
+  noindex={false}
+>
+  <!-- Minimal page — no header nav, conversion focused -->
+  <div class="co-page">
+    <header class="co-header">
+      <a href="/" class="co-logo">
+        <img src="/logo-dark.svg" alt="Senex Solar Power" width="160" height="36" />
+      </a>
+      <a href={SITE.phoneHref} class="co-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+        {SITE.phone}
+      </a>
+    </header>
+
+    <main class="co-main">
+      <div class="co-split">
+        <!-- Left: Value proposition -->
+        <div class="co-left">
+          <h1 class="co-h1 font-display">
+            Află exact cât economisești<br />
+            <span class="co-accent">pe factura ta.</span>
+          </h1>
+          <p class="co-sub">
+            Trimite-ne factura ta la curent și îți facem o analiză completă cu:
+          </p>
+          <ul class="co-benefits">
+            {[
+              'Sistemul solar potrivit consumului tău',
+              'Economiile estimate pe 5, 10 și 25 ani',
+              'Finanțările disponibile (grant AFM 20.000 RON)',
+              'Costul total net după subvenție',
+              'Oferta de preț detaliată',
+            ].map(b => (
+              <li class="co-benefit">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#1E6B3A" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                {b}
+              </li>
+            ))}
+          </ul>
+          <div class="co-trust">
+            <span class="co-trust-item">✓ 100% gratuit</span>
+            <span class="co-trust-item">✓ Fără spam</span>
+            <span class="co-trust-item">✓ Răspuns în 24h</span>
+          </div>
+          <div class="co-testimonial">
+            <p>"Nu știam nimic despre panouri. Echipa Senex a venit la noi și ne-a explicat totul. S-a ocupat de toată hârtia AFM. Acum factura e 45 RON."</p>
+            <span>— Andrei Mihalache, Iași - Copou</span>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="co-right">
+          <div class="co-form-card">
+            <h2 class="co-form-title">Solicită analiza gratuită</h2>
+            <ContactForm client:load />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="co-footer">
+      <a href="/">← Înapoi la site</a>
+      <span>© {new Date().getFullYear()} Senex Solar Power · {SITE.address}</span>
+    </footer>
+  </div>
+</BaseLayout>
+
+<style>
+  .co-page {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    background: #F7F6F2;
+  }
+
+  .co-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    background: white;
+    border-bottom: 1px solid #E2E0D8;
+  }
+
+  .co-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1E6B3A;
+  }
+
+  .co-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-block: 3rem;
+  }
+
+  .co-split {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-inline: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    .co-split {
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+  }
+
+  .co-h1 {
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    font-weight: 400;
+    color: #1A1A1A;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+
+  .co-accent { color: #1E6B3A; }
+
+  .co-sub { color: #4A4A4A; font-size: 1rem; line-height: 1.6; margin-bottom: 1.25rem; }
+
+  .co-benefits { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.5rem; }
+
+  .co-benefit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #2A2A2A;
+  }
+
+  .co-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #1E6B3A;
+  }
+
+  .co-testimonial {
+    background: white;
+    border-radius: 10px;
+    padding: 1.25rem;
+    border: 1px solid #E2E0D8;
+    border-left: 3px solid #F5A623;
+  }
+
+  .co-testimonial p {
+    font-size: 0.875rem;
+    color: #4A4A4A;
+    line-height: 1.65;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+
+  .co-testimonial span {
+    font-size: 0.8rem;
+    color: #6B6B6B;
+    font-weight: 600;
+  }
+
+  .co-form-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid #E2E0D8;
+    box-shadow: 0 4px 32px rgba(30,107,58,0.08);
+  }
+
+  .co-form-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 1.5rem;
+  }
+
+  .co-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-top: 1px solid #E2E0D8;
+    font-size: 0.8rem;
+    color: #9B9B9B;
+  }
+
+  .co-footer a { color: #1E6B3A; font-weight: 600; }
+</style>

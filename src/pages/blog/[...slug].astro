@@ -1,0 +1,83 @@
+---
+export const prerender = true;
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/layout/Footer.astro';
+import WhatsAppButton from '../../components/layout/WhatsAppButton.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={post.data.title} description={post.data.description}>
+  <Header />
+  <main>
+    <article class="article">
+      <header class="article-header">
+        <div class="container article-header-inner">
+          <div class="article-breadcrumb">
+            <a href="/blog">Blog</a> / <span>{post.data.title}</span>
+          </div>
+          <h1 class="article-h1 font-display">{post.data.title}</h1>
+          <p class="article-meta">
+            <time datetime={post.data.publishDate.toISOString()}>
+              {post.data.publishDate.toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+            · Senex Solar Power
+          </p>
+        </div>
+      </header>
+
+      <div class="article-body">
+        <div class="container article-content">
+          <Content />
+        </div>
+      </div>
+
+      <div class="article-cta">
+        <div class="container">
+          <h2 class="font-display">Vrei să calculezi economiile tale?</h2>
+          <a href="/#calculator" class="cta-btn">Calculează gratuit →</a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+  <WhatsAppButton />
+</BaseLayout>
+
+<style>
+  .article-header { background: #1E6B3A; padding-block: 4rem 3rem; }
+  .article-header-inner { max-width: 760px; }
+  .article-breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.55); margin-bottom: 1rem; }
+  .article-breadcrumb a { color: rgba(255,255,255,0.7); }
+  .article-h1 { font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 400; color: white; line-height: 1.2; letter-spacing: -0.015em; margin-bottom: 0.75rem; }
+  .article-meta { font-size: 0.85rem; color: rgba(255,255,255,0.55); }
+  .article-body { padding-block: 4rem; background: #F7F6F2; }
+  .article-content {
+    max-width: 720px;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #2A2A2A;
+  }
+  .article-content :global(h2) { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.75rem; font-weight: 400; color: #1A1A1A; margin: 2rem 0 0.75rem; }
+  .article-content :global(h3) { font-size: 1.2rem; font-weight: 700; color: #1A1A1A; margin: 1.5rem 0 0.5rem; }
+  .article-content :global(p) { margin-bottom: 1.25rem; }
+  .article-content :global(strong) { color: #1A1A1A; }
+  .article-content :global(a) { color: #1E6B3A; text-decoration: underline; }
+  .article-content :global(ul) { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+  .article-content :global(li) { margin-bottom: 0.4rem; }
+  .article-cta { background: #1E6B3A; padding-block: 3rem; text-align: center; }
+  .article-cta h2 { font-size: 1.75rem; color: white; font-weight: 400; margin-bottom: 1.25rem; }
+  .cta-btn { display: inline-flex; background: #F5A623; color: #1A1A1A; font-weight: 700; padding: 0.875rem 2rem; border-radius: 8px; transition: background 0.15s; }
+  .cta-btn:hover { background: #d4891a; }
+</style>

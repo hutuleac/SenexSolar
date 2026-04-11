@@ -1,0 +1,255 @@
+---
+export const prerender = true;
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import WhatsAppButton from '../components/layout/WhatsAppButton.astro';
+import Calculator from '../components/sections/Calculator.astro';
+import HowItWorks from '../components/sections/HowItWorks.astro';
+import Subsidies from '../components/sections/Subsidies.astro';
+import CaseStudies from '../components/sections/CaseStudies.astro';
+import ContactCTA from '../components/sections/ContactCTA.astro';
+import PartnerLogos from '../components/sections/PartnerLogos.astro';
+---
+
+<BaseLayout
+  title="Sisteme Fotovoltaice Rezidențiale Iași"
+  description="Panouri solare pentru case și vile în Iași și Moldova. Grant AFM 20.000 RON, garanție 25 ani, instalare în 1–2 zile. Analiză gratuită."
+>
+  <Header />
+  <main>
+    <!-- Hero rezidential -->
+    <section class="page-hero">
+      <div class="container page-hero-content">
+        <span class="eyebrow">Rezidențial</span>
+        <h1 class="page-h1 font-display">
+          Sistem solar pentru casa ta.<br />
+          <span class="accent">Factură la zero în 6 ani.</span>
+        </h1>
+        <p class="page-sub">
+          Proiectăm și instalăm sisteme fotovoltaice pentru case unifamiliale din Iași și Moldova.
+          Grant AFM de 20.000 RON disponibil, instalare autorizată ANRE.
+        </p>
+        <div class="hero-ctas">
+          <a href="#calculator" class="cta-primary">Calculează economiile tale</a>
+          <a href="/cerere-oferta" class="cta-secondary">Ofertă gratuită</a>
+        </div>
+        <div class="specs-row">
+          <span>5–15 kWp</span>
+          <span>·</span>
+          <span>Recuperare 5–7 ani</span>
+          <span>·</span>
+          <span>Grant AFM 20.000 RON</span>
+          <span>·</span>
+          <span>Garanție 25 ani</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- What's included -->
+    <section class="section">
+      <div class="container">
+        <div class="included-grid animate-on-scroll">
+          <div>
+            <h2 class="section-title font-display">Ce include pachetul rezidențial.</h2>
+            <p class="section-text">
+              Oferim o soluție completă — de la proiectul tehnic la înregistrarea ca prosumator.
+              Nu ai nicio bătaie de cap.
+            </p>
+          </div>
+          <ul class="included-list">
+            {[
+              'Audit energetic gratuit la domiciliu',
+              'Proiect tehnic și avize',
+              'Panouri solare premium (Canadian Solar, Trina, JA Solar)',
+              'Invertor de calitate (Fronius, Huawei, SMA)',
+              'Structură de montaj adaptată acoperișului',
+              'Instalare de echipă autorizată ANRE',
+              'Racordare la rețea și înregistrare prosumator',
+              'Asistență depunere dosar grant AFM',
+              'Aplicație monitorizare producție',
+              'Garanție 25 ani panouri, 10 ani invertor',
+            ].map(item => (
+              <li class="included-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#1E6B3A" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section gallery-section">
+      <div class="container">
+        <h2 class="section-title font-display text-center animate-on-scroll">Instalările noastre.</h2>
+        <div class="gallery-grid animate-on-scroll">
+          <img src="/images/Panouri_fotovoltaice_instalare_pe_casa1.jpg" alt="Panouri solare instalate pe casă în Iași" width="400" height="300" loading="lazy" class="gallery-img" />
+          <img src="/images/Panouri_solare_instalate_pe_casa.jpg" alt="Sistem fotovoltaic rezidențial Moldova" width="400" height="300" loading="lazy" class="gallery-img" />
+          <img src="/images/Panouri_solare_instalate_pe_casa_la_tara.jpg" alt="Panouri solare casă la țară" width="400" height="300" loading="lazy" class="gallery-img" />
+          <img src="/images/Panouri_fotovoltaice_instalare_pe_casa2.jpg" alt="Instalare panouri fotovoltaice acoperiș" width="400" height="300" loading="lazy" class="gallery-img" />
+        </div>
+      </div>
+    </section>
+
+    <Subsidies />
+    <Calculator />
+    <HowItWorks />
+    <PartnerLogos />
+    <CaseStudies />
+    <ContactCTA />
+  </main>
+  <Footer />
+  <WhatsAppButton />
+</BaseLayout>
+
+<style>
+  .page-hero {
+    background: #1E6B3A;
+    padding-block: 5rem 4rem;
+  }
+
+  .page-hero-content {
+    max-width: 720px;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 0.75rem;
+  }
+
+  .page-h1 {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-weight: 400;
+    color: white;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+  }
+
+  .accent { color: #F5A623; }
+
+  .page-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    max-width: 580px;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #F5A623;
+    color: #1A1A1A;
+    font-weight: 700;
+    padding: 0.875rem 1.5rem;
+    border-radius: 8px;
+    transition: background 0.15s, transform 0.15s;
+  }
+
+  .cta-primary:hover { background: #d4891a; transform: translateY(-2px); }
+
+  .cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-weight: 600;
+    padding: 0.875rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: background 0.15s;
+  }
+
+  .cta-secondary:hover { background: rgba(255,255,255,0.2); }
+
+  .specs-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .section { padding-block: 5rem; }
+
+  .section-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 400;
+    color: #1A1A1A;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    margin-bottom: 1rem;
+  }
+
+  .text-center { text-align: center; }
+
+  .section-text {
+    color: #4A4A4A;
+    line-height: 1.7;
+    font-size: 1rem;
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .included-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+  }
+
+  .included-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .included-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: #2A2A2A;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #E2E0D8;
+  }
+
+  .gallery-section { background: #F7F6F2; }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+</style>

@@ -1,0 +1,46 @@
+---
+export const prerender = true;
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import WhatsAppButton from '../components/layout/WhatsAppButton.astro';
+import ContactCTA from '../components/sections/ContactCTA.astro';
+---
+
+<BaseLayout
+  title="Contact — Senex Solar Power Iași"
+  description="Contactați Senex Solar Power din Iași. Telefon, WhatsApp, email, adresă. Program Luni-Vineri 8:00-18:00, Sâmbătă 9:00-14:00."
+>
+  <Header />
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-h1 font-display">Contactați-ne.</h1>
+        <p class="page-sub">Suntem la dispoziția voastră de Luni până Sâmbătă.</p>
+      </div>
+    </section>
+    <ContactCTA />
+  </main>
+  <Footer />
+  <WhatsAppButton />
+</BaseLayout>
+
+<style>
+  .page-hero {
+    background: #1E6B3A;
+    padding-block: 4rem 3rem;
+  }
+
+  .page-h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    color: white;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .page-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.75);
+  }
+</style>
