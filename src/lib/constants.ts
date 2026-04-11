@@ -11,7 +11,7 @@ export const SITE = {
   url: 'https://senexsolar.pages.dev',
   locale: 'ro',
   og: {
-    image: '/og-image.jpg',
+    image: '/og-image.webp',
     width: 1200,
     height: 630,
   },
