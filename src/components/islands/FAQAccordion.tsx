@@ -10,7 +10,7 @@ const faqs: FAQItem[] = [
   {
     question: 'Cât costă un sistem fotovoltaic în 2025?',
     answer:
-      'Un sistem rezidențial complet (5 kWp) costă între 18.000 și 25.000 RON cu TVA. După grant-ul AFM de 20.000 RON, investiția netă poate fi sub 5.000 RON. Pentru sisteme comerciale, prețul scade proporțional per kWp instalat.',
+      'Un sistem rezidențial complet (5 kWp) costă între 18.000 și 25.000 RON cu TVA. Prin finanțarea în rate TBI Bank, poți începe fără să plătești toată suma dintr-o dată. Grant-ul AFM de 20.000 RON este estimat pentru toamna 2026 — te ajutăm să te pregătești din timp. Pentru sisteme comerciale, prețul scade proporțional per kWp instalat.',
   },
   {
     question: 'Pot aplica la programul Casa Verde dacă locuiesc la bloc?',

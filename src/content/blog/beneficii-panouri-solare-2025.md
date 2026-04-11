@@ -7,15 +7,15 @@ tags: ["panouri solare", "casa verde", "iasi", "afm", "fotovoltaice"]
 
 ## De ce 2025 este cel mai bun an să instalezi panouri solare
 
-Prețul energiei electrice în România a crescut constant în ultimii ani. Combinat cu grant-ul AFM de până la 20.000 RON disponibil prin programul Casa Verde, 2025 este momentul optim pentru a face tranziția la energie solară.
+Prețul energiei electrice în România a crescut constant în ultimii ani. Prin finanțarea în rate disponibilă acum prin TBI Bank — și cu grant-ul AFM estimat pentru toamna 2026 — nu există un motiv mai bun să faci tranziția la energie solară.
 
 ## Avantajele principale
 
 ### 1. Reducerea semnificativă a facturii
 Un sistem fotovoltaic de 5 kWp poate acoperi 70–100% din consumul unei familii de 4 persoane. Cu un tarif mediu de 0,85 RON/kWh, economiile anuale depășesc 3.500 RON.
 
-### 2. Grant AFM nerambursabil
-Programul Casa Verde Fotovoltaice al Administrației Fondului pentru Mediu oferă finanțare de până la 20.000 RON pentru instalarea unui sistem solar la casă unifamilială. Banii nu trebuie returnați.
+### 2. Finanțare accesibilă — rate sau grant
+Prin parteneriatul cu TBI Bank, poți finanța sistemul în rate lunare, fără să plătești totul dintr-o dată. În plus, grant-ul AFM Casa Verde (până la 20.000 RON nerambursabili) este estimat pentru **toamna 2026** — te ajutăm să pregătești dosarul din timp, ca să fii primul în rând când se deschide sesiunea.
 
 ### 3. Statut de prosumator
 Ca prosumator, dai curentul produs în plus înapoi în rețea și primești credit energetic. Astfel, factura ta poate ajunge la zero sau chiar negativă în lunile cu soare mult.
@@ -29,6 +29,6 @@ Iașul beneficiază de aproximativ 1.650 ore de soare pe an, cu vârfuri în lun
 
 ## Concluzie
 
-Combinând subvenția AFM, tariful crescut la energie și potențialul solar bun al Moldovei, instalarea unui sistem fotovoltaic în 2025 este una dintre cele mai rentabile investiții pe care le poți face.
+Combinând finanțarea în rate TBI Bank, tariful crescut la energie și potențialul solar bun al Moldovei — plus grant-ul AFM estimat pentru toamna 2026 — instalarea unui sistem fotovoltaic acum este una dintre cele mai rentabile investiții pe care le poți face.
 
 [Calculează cât ai economisi cu calculatorul nostru gratuit →](/#calculator)

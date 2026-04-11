@@ -105,7 +105,7 @@ export function SavingsCalculator() {
             <div className="calc-metric">
               <span className="calc-metric-val">{formatRON(result.systemCostRON)}</span>
               <span className="calc-metric-label">
-                cost net{propertyType === 'rezidential' ? ' (după grant AFM)' : ''}
+                cost net{propertyType === 'rezidential' ? ' (după grant AFM estimat)' : ''}
               </span>
             </div>
             <div className="calc-metric">
@@ -119,7 +119,7 @@ export function SavingsCalculator() {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
               </svg>
-              Grant AFM de <strong>20.000 RON</strong> deja inclus în calcul
+              Grant AFM de <strong>20.000 RON</strong> inclus estimativ (program estimat toamna 2026)
             </div>
           )}
 

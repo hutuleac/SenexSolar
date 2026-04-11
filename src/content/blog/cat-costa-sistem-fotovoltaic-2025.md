@@ -7,7 +7,7 @@ tags: ["preturi panouri solare", "cost sistem fotovoltaic", "afm", "iasi", "inve
 
 ## Cât costă, concret, un sistem fotovoltaic în 2025?
 
-Acesta este întrebarea numărul unu pe care o primim. Răspunsul scurt: **un sistem rezidențial complet, instalat, costă între 18.000 și 40.000 RON** în funcție de putere. Cu grant-ul AFM de 20.000 RON, costul net scade dramatic.
+Aceasta este întrebarea numărul unu pe care o primim. Răspunsul scurt: **un sistem rezidențial complet, instalat, costă între 18.000 și 40.000 RON** în funcție de putere. Poți finanța prin rate TBI Bank, iar dacă te califici, grant-ul AFM (estimat toamna 2026) poate reduce semnificativ costul net.
 
 ## Prețuri orientative pentru sisteme rezidențiale
 
@@ -17,7 +17,7 @@ Acesta este întrebarea numărul unu pe care o primim. Răspunsul scurt: **un si
 | 5 kWp | ~80–100% consum | ~27.000 RON | 20.000 RON | ~7.000 RON |
 | 8 kWp | 100% + surplus | ~40.000 RON | 20.000 RON | ~20.000 RON |
 
-> **Atenție:** Grant-ul AFM acoperă integral un sistem de 3 kWp — practic instalare gratuită pentru consum mediu.
+> **Notă:** Cifrele din coloana "Cost net" includ grant-ul AFM estimat. Programul AFM Casa Verde **nu are sesiune activă în prezent** — lansarea este estimată pentru toamna 2026. Poți instala acum prin rate TBI Bank și aplica la AFM când se deschide.
 
 ## Ce include prețul?
 
@@ -29,7 +29,7 @@ Un sistem complet de la Senex Solar Power include:
 - **Cablaj și tablou electric** — materiale conforme normelor ANRE
 - **Manopera de instalare** — echipă certificată, asigurată
 - **Documentația pentru prosumator** — înregistrare la Delgaz/E.ON
-- **Sprijin dosar AFM** — pregătim și depunem noi tot dosarul
+- **Consultanță finanțare** — rate TBI Bank + pregătire dosar AFM pentru sesiunea 2026
 
 ## Ce NU e inclus de obicei
 
@@ -52,9 +52,9 @@ Firmele nu beneficiază de grant-ul AFM (Casa Verde e doar pentru persoane fizic
 Formula simplă: **Cost net ÷ Economie anuală = Ani recuperare**
 
 Exemplu pentru o casă cu factură de 400 RON/lună din Iași:
-- Cost net sistem 5 kWp după AFM: ~7.000 RON
+- Cost sistem 5 kWp: ~27.000 RON (sau ~7.000 RON dacă aplici și obții grant-ul AFM 2026)
 - Economie anuală estimată: ~4.000 RON
-- **Recuperare: ~1,7 ani**
+- **Recuperare: 5–7 ani fără AFM; sub 2 ani cu grant AFM**
 
 După recuperare, urmează 20+ ani de energie practic gratuită.
 
@@ -69,10 +69,10 @@ După recuperare, urmează 20+ ani de energie practic gratuită.
 **Scad prețul:**
 - Sisteme mai mari (preț/kWp mai mic)
 - Acoperiș plan sau ușor accesibil
-- Grant AFM aplicabil (persoane fizice, casă unifamilială)
+- Grant AFM aplicabil (persoane fizice, casă unifamilială — estimat toamna 2026)
 
 ## Concluzie
 
-În 2025, cu grant-ul AFM și prețul energiei la nivelul actual, un sistem fotovoltaic de 5 kWp se amortizează în 5–7 ani și produce 18–20 ani profit net. Este una dintre puținele investiții cu randament garantat.
+Cu finanțare în rate prin TBI Bank și prețul energiei la nivelul actual, un sistem fotovoltaic de 5 kWp se amortizează în 5–7 ani. Dacă aplici și la grant-ul AFM estimat pentru toamna 2026, recuperarea poate fi sub 2 ani. Urmează 20+ ani de energie practic gratuită — una dintre puținele investiții cu randament garantat.
 
 [Calculează costul exact pentru situația ta →](/#calculator)

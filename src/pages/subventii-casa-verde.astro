@@ -8,8 +8,8 @@ import ContactCTA from '../components/sections/ContactCTA.astro';
 ---
 
 <BaseLayout
-  title="Grant Casa Verde AFM 2025 — Panouri Solare"
-  description="Cum obții grant-ul AFM de 20.000 RON pentru panouri solare prin programul Casa Verde Fotovoltaice. Ghid complet pas cu pas, condiții eligibilitate, documente necesare."
+  title="Grant Casa Verde AFM 2026 — Panouri Solare | Pregătire și Finanțare"
+  description="Tot ce trebuie să știi despre programul Casa Verde AFM pentru panouri solare. Estimat toamna 2026. Între timp, finanțare în rate prin TBI Bank disponibilă acum."
 >
   <Header />
   <main>
@@ -18,20 +18,32 @@ import ContactCTA from '../components/sections/ContactCTA.astro';
         <span class="eyebrow">Programul Casa Verde AFM</span>
         <h1 class="page-h1 font-display">
           20.000 RON nerambursabili<br />
-          <span class="accent">pentru panouri solare.</span>
+          <span class="accent">de la stat — estimat toamna 2026.</span>
         </h1>
         <p class="page-sub">
-          Ghid complet: cum funcționează programul, cine se califică și cum te ajutăm
-          să obții finanțarea fără bătăi de cap.
+          Programul AFM pentru panouri solare este în așteptare. Pe baza edițiilor anterioare,
+          înscrierile sunt estimate pentru septembrie–octombrie 2026. Între timp, poți instala
+          acum prin finanțare în rate TBI Bank.
         </p>
-        <a href="#verificare" class="cta-primary">Verifică dacă te califici</a>
+        <div class="hero-ctas">
+          <a href="/cerere-oferta" class="cta-primary">Instalează acum prin rate TBI Bank</a>
+          <a href="#cum-functioneaza" class="cta-secondary">Cum funcționează AFM</a>
+        </div>
       </div>
     </section>
 
-    <!-- What is AFM -->
+    <!-- Status notice -->
     <section class="section">
       <div class="container content-narrow">
-        <h2 class="section-title font-display animate-on-scroll">Ce este programul Casa Verde?</h2>
+        <div class="status-notice animate-on-scroll">
+          <div class="status-icon">📋</div>
+          <div>
+            <strong>Status actual (aprilie 2026)</strong>
+            <p>Programul AFM Casa Verde Fotovoltaice nu are încă o dată oficială de lansare pentru 2026. Legea bugetului de stat publicată pe 30 martie 2026 deblochează procesul, dar lansarea depinde de publicarea ghidului de finanțare de către AFM. <strong>Estimare: septembrie–octombrie 2026.</strong></p>
+          </div>
+        </div>
+
+        <h2 class="section-title font-display animate-on-scroll" style="margin-top: 3rem">Ce este programul Casa Verde?</h2>
         <p class="section-text animate-on-scroll">
           Programul Casa Verde Fotovoltaice este inițiat de Administrația Fondului pentru Mediu (AFM)
           și finanțat de Guvernul României. Scopul său este să sprijine tranziția energetică prin
@@ -39,12 +51,21 @@ import ContactCTA from '../components/sections/ContactCTA.astro';
         </p>
         <p class="section-text animate-on-scroll">
           Finanțarea este <strong>nerambursabilă</strong> — nu trebuie să returnezi banii.
-          Suma maximă este de <strong>20.000 RON</strong> per gospodărie.
+          Suma maximă estimată este de <strong>20.000 RON</strong> per gospodărie. Ediția 2026 ar putea
+          include un accent pe <strong>baterii de stocare</strong>, conform declarațiilor Ministerului Mediului.
         </p>
 
         <div class="highlight-box animate-on-scroll">
           <div class="highlight-num font-display">20.000 RON</div>
-          <div class="highlight-label">grant nerambursabil per gospodărie</div>
+          <div class="highlight-label">grant nerambursabil estimat per gospodărie · Toamna 2026</div>
+        </div>
+
+        <div class="tbi-bridge animate-on-scroll">
+          <div class="tbi-bridge-content">
+            <strong>Nu vrei să aștepți toamna?</strong>
+            <p>Prin parteneriatul cu TBI Bank: <strong>0% avans</strong>, rate fixe până la 60 de luni, aprobare online în aceeași zi. Acoperă panouri, invertor, structură și instalare — tot kitul. Când se deschide AFM, te ajutăm să aplici și acolo.</p>
+          </div>
+          <a href="/cerere-oferta" class="tbi-bridge-cta">Ofertă cu rate TBI Bank</a>
         </div>
       </div>
     </section>
@@ -82,14 +103,14 @@ import ContactCTA from '../components/sections/ContactCTA.astro';
     <!-- Step by step -->
     <section class="section">
       <div class="container content-narrow">
-        <h2 class="section-title font-display animate-on-scroll">Cum funcționează — pas cu pas.</h2>
-        <p class="section-text animate-on-scroll">Noi ne ocupăm de toți pașii. Trebuie doar să semnezi documentele.</p>
+        <h2 class="section-title font-display animate-on-scroll" id="cum-functioneaza">Cum funcționează — pas cu pas.</h2>
+        <p class="section-text animate-on-scroll">Procesul când se deschide sesiunea AFM. Noi ne ocupăm de toți pașii — tu semnezi documentele.</p>
 
         <div class="steps animate-on-scroll">
           {[
-            { n: '1', title: 'Analiza gratuită', desc: 'Venim la tine, evaluăm casa și consumul, confirmăm eligibilitatea AFM.' },
-            { n: '2', title: 'Pregătim dosarul', desc: 'Echipa noastră pregătește toate documentele: cerere AFM, proiect tehnic, contract, acte proprietate.' },
-            { n: '3', title: 'Depunere dosar', desc: 'Depunem dosarul în sistemul AFM. Așteptăm aprobarea (de obicei 30–60 zile).' },
+            { n: '1', title: 'Analiza gratuită (acum)', desc: 'Venim la tine, evaluăm casa și consumul, confirmăm eligibilitatea AFM. Poți face asta oricând — nu trebuie să aștepți deschiderea programului.' },
+            { n: '2', title: 'Pregătim dosarul', desc: 'Echipa noastră pregătește toate documentele: cerere AFM, proiect tehnic, contract, acte proprietate. Le avem gata pentru ziua deschiderii.' },
+            { n: '3', title: 'Depunere dosar', desc: 'Depunem dosarul în sistemul AFM imediat la deschidere. Fondurile se epuizează rapid — viteza contează.' },
             { n: '4', title: 'Instalare sistem', desc: 'La aprobarea dosarului, instalăm sistemul fotovoltaic. Durează 1–2 zile.' },
             { n: '5', title: 'Recepție și plată', desc: 'AFM verifică instalarea și virează suma aprobată direct în contul tău.' },
             { n: '6', title: 'Energie gratuită', desc: 'Ești prosumator. Facturile scad cu 70–100%. Garanție 25 ani.' },
@@ -173,6 +194,12 @@ import ContactCTA from '../components/sections/ContactCTA.astro';
     max-width: 540px;
   }
 
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
   .cta-primary {
     display: inline-flex;
     background: #F5A623;
@@ -184,6 +211,68 @@ import ContactCTA from '../components/sections/ContactCTA.astro';
   }
 
   .cta-primary:hover { background: #d4891a; transform: translateY(-2px); }
+
+  .cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-weight: 600;
+    padding: 0.875rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: background 0.15s;
+  }
+
+  .cta-secondary:hover { background: rgba(255,255,255,0.2); }
+
+  .status-notice {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: #FFF8E7;
+    border: 1px solid #F5A623;
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    font-size: 0.9rem;
+    color: #4A4A4A;
+    line-height: 1.6;
+  }
+
+  .status-notice strong { display: block; color: #1A1A1A; margin-bottom: 0.35rem; font-size: 0.95rem; }
+  .status-notice p { margin: 0; }
+  .status-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+  .tbi-bridge {
+    margin-top: 2rem;
+    background: #1E6B3A;
+    color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .tbi-bridge-content strong { display: block; margin-bottom: 0.35rem; }
+  .tbi-bridge-content p { margin: 0; font-size: 0.875rem; color: rgba(255,255,255,0.8); line-height: 1.55; max-width: 460px; }
+
+  .tbi-bridge-cta {
+    display: inline-flex;
+    white-space: nowrap;
+    background: #F5A623;
+    color: #1A1A1A;
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    transition: background 0.15s;
+    flex-shrink: 0;
+  }
+
+  .tbi-bridge-cta:hover { background: #d4891a; }
 
   .section { padding-block: 5rem; }
   .bg-beige { background: #F7F6F2; }
