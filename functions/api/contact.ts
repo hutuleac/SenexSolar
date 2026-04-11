@@ -7,7 +7,11 @@ const schema = z.object({
   propertyType: z.enum(['casa', 'firma', 'apartament']),
 });
 
-export const onRequestPost: PagesFunction = async ({ request }) => {
+interface Env {
+  RESEND_API_KEY?: string;
+}
+
+export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   try {
     const body = await request.json();
     const result = schema.safeParse(body);
@@ -19,24 +23,44 @@ export const onRequestPost: PagesFunction = async ({ request }) => {
       );
     }
 
-    // Phase 1: Log and return success (no email yet)
-    console.log('[Contact Form Submission]', {
-      name: result.data.name,
-      phone: result.data.phone,
-      billAmount: result.data.billAmount,
-      propertyType: result.data.propertyType,
-      timestamp: new Date().toISOString(),
-    });
+    const { name, phone, billAmount, propertyType } = result.data;
 
-    // Phase 2: Add Resend email delivery here
-    // const resendApiKey = env.RESEND_API_KEY;
-    // await fetch('https://api.resend.com/emails', { ... });
+    // Send email via Resend if API key is configured
+    if (env.RESEND_API_KEY) {
+      const propertyLabel = { casa: 'Casă', firma: 'Firmă / Hală', apartament: 'Apartament' }[propertyType];
+
+      await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${env.RESEND_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from: 'Senex Solar Power <noreply@senexsolarpower.ro>',
+          to: ['contact@senexsolarpower.ro'],
+          reply_to: undefined,
+          subject: `Cerere ofertă nouă — ${name}`,
+          html: `
+            <h2>Cerere ofertă nouă de pe site</h2>
+            <table style="border-collapse:collapse;width:100%">
+              <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Nume</td><td style="padding:8px;border:1px solid #ddd">${name}</td></tr>
+              <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Telefon</td><td style="padding:8px;border:1px solid #ddd">${phone}</td></tr>
+              <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Factură lunară</td><td style="padding:8px;border:1px solid #ddd">${billAmount} RON/lună</td></tr>
+              <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Tip proprietate</td><td style="padding:8px;border:1px solid #ddd">${propertyLabel}</td></tr>
+              <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Data</td><td style="padding:8px;border:1px solid #ddd">${new Date().toLocaleString('ro-RO')}</td></tr>
+            </table>
+            <p style="margin-top:16px;color:#666">Trimis de pe <a href="https://senexsolar.pages.dev">senexsolar.pages.dev</a></p>
+          `,
+        }),
+      });
+    }
 
     return Response.json({
       success: true,
       message: 'Mesajul a fost primit. Vă vom contacta în maxim 24 de ore.',
     });
   } catch (error) {
+    console.error('[Contact Form Error]', error);
     return Response.json(
       { success: false, error: 'Eroare internă. Vă rugăm să ne contactați direct.' },
       { status: 500 }
