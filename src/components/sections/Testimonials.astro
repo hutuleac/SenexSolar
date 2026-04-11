@@ -1,0 +1,56 @@
+---
+import { TestimonialCarousel } from '../islands/TestimonialCarousel';
+---
+
+<section class="section testimonials-section" id="testimoniale">
+  <div class="container">
+    <div class="t-header animate-on-scroll">
+      <span class="section-eyebrow">Testimoniale</span>
+      <h2 class="section-title font-display">
+        Ce spun clienții noștri.
+      </h2>
+      <p class="section-sub">
+        Familii și firme din Iași și Moldova care și-au redus facturile la curent cu ajutorul echipei Senex.
+      </p>
+    </div>
+
+    <TestimonialCarousel client:visible />
+  </div>
+</section>
+
+<style>
+  .testimonials-section {
+    background: #F7F6F2;
+  }
+
+  .t-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+  }
+
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #1E6B3A;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 400;
+    color: #1A1A1A;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.015em;
+  }
+
+  .section-sub {
+    color: #6B6B6B;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+</style>

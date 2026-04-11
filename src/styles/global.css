@@ -1,0 +1,193 @@
+/* Fontsource — self-hosted, GDPR compliant */
+@import '@fontsource/instrument-serif/400.css';
+@import '@fontsource/instrument-serif/400-italic.css';
+@import '@fontsource-variable/inter';
+
+/* Tailwind v4 */
+@import 'tailwindcss';
+
+/* ── Design Tokens ── */
+@theme {
+  /* Colors */
+  --color-green-DEFAULT: #1E6B3A;
+  --color-green-dark: #164f2b;
+  --color-green-light: #2a8a4e;
+  --color-orange-DEFAULT: #F5A623;
+  --color-orange-dark: #d4891a;
+  --color-beige: #F7F6F2;
+  --color-ink: #1A1A1A;
+  --color-muted: #6B6B6B;
+  --color-border: #E2E0D8;
+
+  /* Typography */
+  --font-family-display: 'Instrument Serif', Georgia, serif;
+  --font-family-body: 'Inter Variable', 'Inter', system-ui, sans-serif;
+
+  /* Spacing extras */
+  --spacing-section: 6rem;
+
+  /* Border radius */
+  --radius-card: 12px;
+  --radius-btn: 8px;
+}
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-ink);
+  background-color: var(--color-beige);
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Focus styles (WCAG) ── */
+:focus-visible {
+  outline: 2px solid var(--color-green-DEFAULT);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Section spacing ── */
+.section {
+  padding-block: var(--spacing-section);
+}
+
+.section-sm {
+  padding-block: 3rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* ── Typography helpers ── */
+.font-display {
+  font-family: var(--font-family-display);
+}
+
+/* ── CSS Scroll-Driven Animations ── */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-on-scroll {
+  animation: slide-up linear both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 25%;
+}
+
+/* Fallback: if scroll timeline not supported, just show */
+@supports not (animation-timeline: view()) {
+  .animate-on-scroll {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Hero fade-in on load */
+.animate-fade-in {
+  animation: fade-in 0.8s ease forwards;
+}
+
+.animate-fade-in-delay {
+  animation: fade-in 0.8s ease 0.3s both;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fade-in 0.8s ease 0.6s both;
+}
+
+/* ── Partner Logo Marquee ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ── Utilities ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Hero video overlay ── */
+.hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(10, 40, 20, 0.55) 100%
+  );
+}
+
+/* ── Card shadow ── */
+.card-shadow {
+  box-shadow: 0 4px 24px rgba(30, 107, 58, 0.08), 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.card-shadow-hover {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card-shadow-hover:hover {
+  box-shadow: 0 8px 40px rgba(30, 107, 58, 0.14), 0 2px 8px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}

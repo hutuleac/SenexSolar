@@ -1,0 +1,155 @@
+---
+---
+
+<section class="section ps-section" id="de-ce-solar">
+  <div class="container">
+    <div class="ps-grid">
+      <!-- Problem -->
+      <div class="ps-problem animate-on-scroll">
+        <span class="ps-eyebrow">Problema</span>
+        <h2 class="ps-title font-display">
+          De ce îți crește factura<br />în fiecare an.
+        </h2>
+        <p class="ps-text">
+          Prețul energiei electrice în România a crescut cu <strong>40%</strong> în ultimii 3 ani.
+          E.ON, Electrica, Enel — toți aplică același model: tu plătești, ei câștigă.
+        </p>
+        <p class="ps-text">
+          Și asta nu se va opri. Prețul energiei continuă să crească, iar factura ta cu el.
+        </p>
+        <div class="ps-stat-row">
+          <div class="ps-stat">
+            <span class="ps-stat-num">+40%</span>
+            <span class="ps-stat-label">creștere prețuri<br />energie 2021–2024</span>
+          </div>
+          <div class="ps-stat">
+            <span class="ps-stat-num">20–30%</span>
+            <span class="ps-stat-label">din factură = taxe<br />și distribuție</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solution -->
+      <div class="ps-solution animate-on-scroll">
+        <span class="ps-eyebrow solution">Soluția</span>
+        <h2 class="ps-title font-display">
+          Oprești asta cu<br />un panou solar.
+        </h2>
+        <p class="ps-text">
+          Un sistem fotovoltaic de <strong>5 kWp</strong> instalat pe casa ta produce suficientă
+          energie pentru o familie de 4 persoane. Investiția se recuperează în <strong>5–7 ani</strong>.
+          După aceea, energia e gratuită încă 20+ ani.
+        </p>
+        <p class="ps-text">
+          Nu ești dependent de furnizor. Nu mai ești afectat de creșteri de prețuri.
+          Ești <em>prosumator</em> — produci și consumi energia ta.
+        </p>
+        <a href="#calculator" class="ps-cta">
+          Calculează cât ai economisi
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ps-section {
+    background: #F7F6F2;
+  }
+
+  .ps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .ps-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+  }
+
+  .ps-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #6B6B6B;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    background: #E8E6DE;
+    border-radius: 50px;
+  }
+
+  .ps-eyebrow.solution {
+    background: rgba(30,107,58,0.1);
+    color: #1E6B3A;
+  }
+
+  .ps-title {
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    font-weight: 400;
+    color: #1A1A1A;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+  }
+
+  .ps-text {
+    color: #4A4A4A;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .ps-stat-row {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #E2E0D8;
+  }
+
+  .ps-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .ps-stat-num {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 1.75rem;
+    color: #c0392b;
+    line-height: 1;
+  }
+
+  .ps-stat-label {
+    font-size: 0.8rem;
+    color: #6B6B6B;
+    line-height: 1.4;
+  }
+
+  .ps-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    background: #1E6B3A;
+    color: white;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.875rem 1.5rem;
+    border-radius: 8px;
+    transition: background 0.15s, transform 0.15s;
+  }
+
+  .ps-cta:hover {
+    background: #164f2b;
+    transform: translateY(-2px);
+  }
+</style>

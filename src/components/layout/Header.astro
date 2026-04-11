@@ -1,0 +1,291 @@
+---
+import { SITE, NAV_LINKS } from '../../lib/constants';
+---
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <!-- Logo -->
+    <a href="/" class="header-logo" aria-label="Senex Solar Power — Acasă">
+      <img src="/logo.svg" alt="Senex Solar Power" width="160" height="36" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="header-nav" aria-label="Navigație principală">
+      {NAV_LINKS.map((link) => (
+        <a href={link.href} class="nav-link">{link.label}</a>
+      ))}
+    </nav>
+
+    <!-- Desktop CTA + Phone -->
+    <div class="header-actions">
+      <a href="tel:+40754457239" class="header-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+        {SITE.phone}
+      </a>
+      <a href="/cerere-oferta" class="btn-primary">
+        Cerere Ofertă Gratuită
+      </a>
+    </div>
+
+    <!-- Hamburger (mobile) -->
+    <button
+      class="hamburger"
+      id="menu-toggle"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Deschide meniul"
+    >
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="Meniu mobil">
+    {NAV_LINKS.map((link) => (
+      <a href={link.href} class="mobile-nav-link">{link.label}</a>
+    ))}
+  </nav>
+  <div class="mobile-menu-footer">
+    <a href={SITE.whatsapp} class="mobile-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      WhatsApp
+    </a>
+    <a href="/cerere-oferta" class="btn-primary" style="width: 100%; text-align: center;">
+      Cerere Ofertă Gratuită
+    </a>
+  </div>
+</div>
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const overlay = document.getElementById('mobile-overlay');
+
+  function openMenu() {
+    menu?.classList.add('is-open');
+    overlay?.classList.add('is-visible');
+    toggle?.setAttribute('aria-expanded', 'true');
+    menu?.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    menu?.classList.remove('is-open');
+    overlay?.classList.remove('is-visible');
+    toggle?.setAttribute('aria-expanded', 'false');
+    menu?.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.contains('is-open');
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  overlay?.addEventListener('click', closeMenu);
+
+  // Close on nav link click
+  menu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+</script>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(30, 107, 58, 0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    height: 68px;
+  }
+
+  .header-logo img {
+    height: 36px;
+    width: auto;
+  }
+
+  .header-nav {
+    display: none;
+    gap: 0.25rem;
+    margin-left: auto;
+  }
+
+  @media (min-width: 1024px) {
+    .header-nav { display: flex; }
+  }
+
+  .nav-link {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+  }
+
+  .nav-link:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+  }
+
+  .header-actions {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+  }
+
+  @media (min-width: 1024px) {
+    .header-nav { margin-left: auto; }
+    .header-actions { display: flex; margin-left: 1rem; }
+  }
+
+  .header-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.15s;
+  }
+
+  .header-phone:hover { color: #fff; }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #F5A623;
+    color: #1A1A1A;
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    transition: background 0.15s, transform 0.15s;
+    white-space: nowrap;
+  }
+
+  .btn-primary:hover {
+    background: #d4891a;
+    transform: translateY(-1px);
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.5rem;
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  @media (min-width: 1024px) {
+    .hamburger { display: none; }
+  }
+
+  .hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.2s;
+  }
+
+  /* Mobile menu */
+  .mobile-menu {
+    position: fixed;
+    top: 68px;
+    right: 0;
+    bottom: 0;
+    width: min(320px, 100vw);
+    background: #fff;
+    z-index: 99;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transform: translateX(100%);
+    transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+  }
+
+  .mobile-menu.is-open {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-link {
+    display: block;
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1A1A1A;
+    border-radius: 8px;
+    border-bottom: 1px solid #f0ede6;
+    transition: background 0.15s;
+  }
+
+  .mobile-nav-link:hover {
+    background: #F7F6F2;
+  }
+
+  .mobile-menu-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .mobile-whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: #25d366;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.15s;
+  }
+
+  .mobile-whatsapp-btn:hover {
+    background: #1eb554;
+  }
+
+  .mobile-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 98;
+  }
+
+  .mobile-overlay.is-visible {
+    display: block;
+  }
+
+  @media (min-width: 1024px) {
+    .mobile-menu,
+    .mobile-overlay { display: none !important; }
+  }
+</style>

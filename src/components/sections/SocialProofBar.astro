@@ -1,0 +1,78 @@
+---
+import { AnimatedCounter } from '../islands/AnimatedCounter';
+---
+
+<section class="spb" aria-label="Cifre cheie">
+  <div class="container spb-grid">
+    <div class="spb-item">
+      <div class="spb-number font-display">
+        <AnimatedCounter client:visible to={150} suffix="+" />
+      </div>
+      <div class="spb-label">Sisteme instalate</div>
+    </div>
+
+    <div class="spb-item">
+      <div class="spb-number font-display">
+        <AnimatedCounter client:visible to={4.9} suffix="★" decimals={1} />
+      </div>
+      <div class="spb-label">Medie Google Reviews</div>
+    </div>
+
+    <div class="spb-item">
+      <div class="spb-number font-display">
+        <AnimatedCounter client:visible to={25} suffix=" ani" />
+      </div>
+      <div class="spb-label">Garanție performanță</div>
+    </div>
+
+    <div class="spb-item">
+      <div class="spb-number font-display">
+        <AnimatedCounter client:visible to={20000} suffix=" RON" />
+      </div>
+      <div class="spb-label">Grant AFM disponibil</div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .spb {
+    background: #1E6B3A;
+    padding-block: 2.5rem;
+  }
+
+  .spb-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .spb-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .spb-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .spb-number {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 400;
+    color: #F5A623;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .spb-label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.8);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+</style>

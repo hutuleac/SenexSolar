@@ -1,0 +1,223 @@
+---
+---
+
+<section class="section about-section" id="despre-noi">
+  <div class="container about-grid">
+    <!-- Image side -->
+    <div class="about-image-col animate-on-scroll">
+      <div class="about-img-wrapper">
+        <img
+          src="/images/Panouri_fotovoltaice_instalare_pe_casa1.jpg"
+          alt="Echipa Senex Solar Power la lucru pe acoperiș"
+          width="560"
+          height="420"
+          loading="lazy"
+          class="about-img"
+        />
+        <div class="about-badge">
+          <span class="badge-num font-display">150+</span>
+          <span class="badge-label">instalații realizate</span>
+        </div>
+      </div>
+
+      <div class="certifications">
+        <span class="cert">🏅 Autorizat ANRE tip B</span>
+        <span class="cert">🏅 Instalatori autorizați Casa Verde AFM</span>
+        <span class="cert">🏅 Partener certificat Huawei, Fronius, SMA</span>
+      </div>
+    </div>
+
+    <!-- Text side -->
+    <div class="about-content animate-on-scroll">
+      <span class="section-eyebrow">Despre noi</span>
+      <h2 class="about-title font-display">
+        Nu suntem o firmă de vânzări.<br />
+        Suntem instalatori din Iași.
+      </h2>
+
+      <p class="about-text">
+        <strong>Constantin Cărăuşu</strong> a înființat Senex Solar Power în 2019, după 7 ani de experiență
+        în instalații electrice. Viziunea lui simplă: să facă energia solară accesibilă oricărei familii
+        din Moldova, fără contracte complicate și fără promisiuni minciunoase.
+      </p>
+
+      <p class="about-text">
+        Astăzi echipa noastră de <strong>12 tehnicieni autorizați</strong> a instalat peste 150 de sisteme
+        în județele Iași, Vaslui, Neamț și Bacău.
+      </p>
+
+      <div class="about-quote">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="#1E6B3A" opacity="0.15" aria-hidden="true">
+          <path d="M0 24V14.4C0 9.6 1.6 5.8 4.8 3 8 1 12 0 16 0v4.8c-2.4 0-4.4.7-6 2.1-1.6 1.4-2.4 3.3-2.4 5.7H12V24H0zm16 0V14.4c0-4.8 1.6-8.6 4.8-11.4C24 1 28 0 32 0v4.8c-2.4 0-4.4.7-6 2.1-1.6 1.4-2.4 3.3-2.4 5.7H28V24H16z"/>
+        </svg>
+        <p>
+          Nu vindem — educăm. Dacă după analiza gratuită solar nu se potrivește situației tale, ți-o spunem direct.
+        </p>
+      </div>
+
+      <div class="about-stats">
+        <div class="about-stat">
+          <span class="stat-num font-display">2019</span>
+          <span class="stat-label">An înființare</span>
+        </div>
+        <div class="about-stat">
+          <span class="stat-num font-display">12</span>
+          <span class="stat-label">Tehnicieni autorizați</span>
+        </div>
+        <div class="about-stat">
+          <span class="stat-num font-display">4</span>
+          <span class="stat-label">Județe acoperite</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    background: white;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    .about-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+  }
+
+  .about-image-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-img-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .about-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .about-badge {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    background: #1E6B3A;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  }
+
+  .badge-num {
+    display: block;
+    font-size: 2rem;
+    color: #F5A623;
+    line-height: 1;
+  }
+
+  .badge-label {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .certifications {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cert {
+    font-size: 0.875rem;
+    color: #4A4A4A;
+    padding: 0.6rem 1rem;
+    background: #F7F6F2;
+    border-radius: 6px;
+    border: 1px solid #E2E0D8;
+  }
+
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #1E6B3A;
+    margin-bottom: 0.75rem;
+  }
+
+  .about-title {
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    font-weight: 400;
+    color: #1A1A1A;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .about-text {
+    color: #4A4A4A;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .about-quote {
+    position: relative;
+    padding: 1.25rem 1.5rem;
+    background: #F7F6F2;
+    border-radius: 8px;
+    border-left: 3px solid #1E6B3A;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-quote p {
+    font-size: 1rem;
+    color: #2A2A2A;
+    line-height: 1.65;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .about-stats {
+    display: flex;
+    gap: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #E2E0D8;
+  }
+
+  .about-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .stat-num {
+    font-size: 2rem;
+    color: #1E6B3A;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+    color: #6B6B6B;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+</style>

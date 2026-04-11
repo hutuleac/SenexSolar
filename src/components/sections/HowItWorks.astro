@@ -1,0 +1,196 @@
+---
+const steps = [
+  {
+    number: '01',
+    title: 'Analiză gratuită',
+    subtitle: 'Ziua 1–2',
+    description:
+      'Venim la tine, analizăm consumul, orientarea acoperișului și îți facem un proiect tehnic și financiar complet. Gratuit, fără obligații.',
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>`,
+  },
+  {
+    number: '02',
+    title: 'Instalare rapidă',
+    subtitle: 'Ziua 15–30',
+    description:
+      'Echipa noastră autorizată ANRE instalează sistemul în 1–2 zile. Ne ocupăm de toate autorizațiile și racordarea la rețea.',
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>`,
+  },
+  {
+    number: '03',
+    title: 'Energie gratuită 25+ ani',
+    subtitle: 'Din prima zi',
+    description:
+      'Sistemul intră în funcțiune, devii prosumator. Te ajutăm să te înregistrezi la furnizor și să obții grant-ul AFM de 20.000 RON.',
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>`,
+  },
+];
+---
+
+<section class="section hiw-section" id="cum-functioneaza">
+  <div class="container">
+    <div class="hiw-header animate-on-scroll">
+      <span class="section-eyebrow">Proces simplu</span>
+      <h2 class="section-title font-display">
+        Cum funcționează.<br />3 pași, fără complicații.
+      </h2>
+      <p class="section-sub">
+        De la prima discuție până la energia gratuită pe factură — echipa noastră se ocupă de tot.
+      </p>
+    </div>
+
+    <div class="hiw-grid">
+      {steps.map((step, i) => (
+        <div class="hiw-card animate-on-scroll" style={`animation-delay: ${i * 0.1}s`}>
+          <div class="hiw-icon" set:html={step.icon} />
+          <div class="hiw-step-num">{step.number}</div>
+          <h3 class="hiw-title">{step.title}</h3>
+          <span class="hiw-subtitle">{step.subtitle}</span>
+          <p class="hiw-desc">{step.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="hiw-cta animate-on-scroll">
+      <a href="#calculator" class="btn-green">
+        Vreau analiza gratuită
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+        </svg>
+      </a>
+      <p class="hiw-note">Fără spam. Fără presiune. Doar informații.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hiw-section {
+    background: white;
+  }
+
+  .hiw-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3.5rem;
+  }
+
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #1E6B3A;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 400;
+    color: #1A1A1A;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.015em;
+  }
+
+  .section-sub {
+    color: #6B6B6B;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .hiw-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .hiw-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .hiw-card {
+    background: #F7F6F2;
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    border: 1px solid #E2E0D8;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .hiw-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(30,107,58,0.1);
+  }
+
+  .hiw-icon {
+    color: #1E6B3A;
+    margin-bottom: 1rem;
+  }
+
+  .hiw-step-num {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 3rem;
+    color: rgba(30,107,58,0.12);
+    font-weight: 400;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    line-height: 1;
+  }
+
+  .hiw-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 0.25rem;
+  }
+
+  .hiw-subtitle {
+    font-size: 0.8rem;
+    color: #1E6B3A;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .hiw-desc {
+    font-size: 0.9rem;
+    color: #4A4A4A;
+    line-height: 1.65;
+  }
+
+  .hiw-cta {
+    text-align: center;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .btn-green {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #1E6B3A;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    transition: background 0.15s, transform 0.15s;
+  }
+
+  .btn-green:hover {
+    background: #164f2b;
+    transform: translateY(-2px);
+  }
+
+  .hiw-note {
+    font-size: 0.85rem;
+    color: #6B6B6B;
+  }
+</style>

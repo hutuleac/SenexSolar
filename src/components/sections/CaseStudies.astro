@@ -1,0 +1,219 @@
+---
+import { getCollection } from 'astro:content';
+const cases = await getCollection('caseStudies');
+
+function formatRON(n: number) {
+  return new Intl.NumberFormat('ro-RO').format(n) + ' RON';
+}
+---
+
+<section class="section cs-section" id="studii-caz">
+  <div class="container">
+    <div class="cs-header animate-on-scroll">
+      <span class="section-eyebrow">Rezultate reale</span>
+      <h2 class="section-title font-display">
+        Ce au obținut clienții noștri.
+      </h2>
+      <p class="section-sub">
+        Cifrele reale bat orice text promoțional. Iată ce au realizat familiile și firmele care au ales Senex Solar Power.
+      </p>
+    </div>
+
+    <div class="cs-grid">
+      {cases.map((cs, i) => (
+        <div class="cs-card animate-on-scroll" style={`animation-delay: ${i * 0.1}s`}>
+          <div class="cs-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            {cs.data.location}
+          </div>
+
+          <div class="cs-table">
+            <div class="cs-row">
+              <span class="cs-key">Sistem instalat</span>
+              <span class="cs-val">{cs.data.systemKwp} kWp ({cs.data.panels} panouri)</span>
+            </div>
+            <div class="cs-row">
+              <span class="cs-key">Investiție totală</span>
+              <span class="cs-val">{formatRON(cs.data.investitieRON)}</span>
+            </div>
+            {cs.data.grantRON > 0 && (
+              <div class="cs-row highlight">
+                <span class="cs-key">Grant AFM primit</span>
+                <span class="cs-val grant">{formatRON(cs.data.grantRON)}</span>
+              </div>
+            )}
+            <div class="cs-row">
+              <span class="cs-key">Economie anuală</span>
+              <span class="cs-val">{formatRON(cs.data.economieAnRON)}</span>
+            </div>
+            <div class="cs-row">
+              <span class="cs-key">Recuperare investiție</span>
+              <span class="cs-val">
+                {cs.data.recuperareAni === 0 ? 'Sistem acoperit de grant' : `${cs.data.recuperareAni} ani`}
+              </span>
+            </div>
+            <div class="cs-row total">
+              <span class="cs-key">Economie pe 25 ani</span>
+              <span class="cs-val strong">{formatRON(cs.data.economie25aniRON)}</span>
+            </div>
+          </div>
+
+          <blockquote class="cs-quote">
+            "{cs.data.quote}"
+            <footer class="cs-author">— {cs.data.author}</footer>
+          </blockquote>
+        </div>
+      ))}
+    </div>
+
+    <div class="cs-cta animate-on-scroll">
+      <a href="/cerere-oferta" class="btn-orange">
+        Vreau rezultate similare
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cs-section {
+    background: #F7F6F2;
+  }
+
+  .cs-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+  }
+
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #1E6B3A;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 400;
+    color: #1A1A1A;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.015em;
+  }
+
+  .section-sub {
+    color: #6B6B6B;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .cs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .cs-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .cs-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.75rem;
+    border: 1px solid #E2E0D8;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+
+  .cs-location {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #1E6B3A;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .cs-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid #E2E0D8;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .cs-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 0.875rem;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #E2E0D8;
+  }
+
+  .cs-row:last-child { border-bottom: none; }
+
+  .cs-row.highlight { background: rgba(30,107,58,0.06); }
+  .cs-row.total { background: #F7F6F2; }
+
+  .cs-key { color: #6B6B6B; }
+  .cs-val { font-weight: 600; color: #1A1A1A; text-align: right; }
+  .cs-val.grant { color: #1E6B3A; }
+  .cs-val.strong { color: #1E6B3A; font-size: 1rem; }
+
+  .cs-quote {
+    font-size: 0.875rem;
+    color: #4A4A4A;
+    line-height: 1.65;
+    font-style: italic;
+    border-left: 3px solid #F5A623;
+    padding-left: 1rem;
+    margin: 0;
+  }
+
+  .cs-author {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: normal;
+    font-size: 0.8rem;
+    color: #6B6B6B;
+    font-weight: 600;
+  }
+
+  .cs-cta {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .btn-orange {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #F5A623;
+    color: #1A1A1A;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    transition: background 0.15s, transform 0.15s;
+  }
+
+  .btn-orange:hover {
+    background: #d4891a;
+    transform: translateY(-2px);
+  }
+</style>

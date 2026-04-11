@@ -1,17 +1,44 @@
 ---
-
+export const prerender = true;
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import WhatsAppButton from '../components/layout/WhatsAppButton.astro';
+import Hero from '../components/sections/Hero.astro';
+import SocialProofBar from '../components/sections/SocialProofBar.astro';
+import ProblemSolution from '../components/sections/ProblemSolution.astro';
+import Calculator from '../components/sections/Calculator.astro';
+import HowItWorks from '../components/sections/HowItWorks.astro';
+import Services from '../components/sections/Services.astro';
+import Subsidies from '../components/sections/Subsidies.astro';
+import CaseStudies from '../components/sections/CaseStudies.astro';
+import Testimonials from '../components/sections/Testimonials.astro';
+import About from '../components/sections/About.astro';
+import PartnerLogos from '../components/sections/PartnerLogos.astro';
+import FAQ from '../components/sections/FAQ.astro';
+import ContactCTA from '../components/sections/ContactCTA.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Panouri Solare Iași"
+  description="Instalare panouri fotovoltaice în Iași și Moldova. Sisteme rezidențiale și comerciale, partener Casa Verde AFM. Analiză gratuită, garanție 25 ani."
+>
+  <Header />
+  <main>
+    <Hero />
+    <SocialProofBar />
+    <ProblemSolution />
+    <Calculator />
+    <HowItWorks />
+    <Services />
+    <Subsidies />
+    <CaseStudies />
+    <Testimonials />
+    <About />
+    <PartnerLogos />
+    <FAQ />
+    <ContactCTA />
+  </main>
+  <Footer />
+  <WhatsAppButton />
+</BaseLayout>
