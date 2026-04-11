@@ -34,6 +34,12 @@ export function ContactForm() {
       });
       if (res.ok) {
         setStatus('success');
+        if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+          (window as any).gtag('event', 'generate_lead', {
+            event_category: 'contact',
+            event_label: 'contact_form',
+          });
+        }
       } else {
         setStatus('error');
       }
