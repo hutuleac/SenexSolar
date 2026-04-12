@@ -138,3 +138,68 @@ export function getBlogPostSchema(post: {
     isPartOf: { '@type': 'Blog', name: `Blog — ${SITE.name}`, url: `${SITE.url}/blog` },
   };
 }
+
+export function getWebSiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.name,
+    url: SITE.url,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${SITE.url}/blog?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  };
+}
+
+export function getServiceSchema(type: 'rezidential' | 'comercial') {
+  const isRez = type === 'rezidential';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: isRez
+      ? 'Instalare sistem fotovoltaic rezidențial'
+      : 'Instalare sistem fotovoltaic comercial',
+    description: isRez
+      ? 'Sisteme fotovoltaice 3–15 kWp pentru case și vile din Iași și Moldova. Include instalare, racordare ANRE și asistență dosar AFM.'
+      : 'Sisteme fotovoltaice 10–500 kWp pentru firme, hale și spații comerciale din Iași și Moldova. ROI 3–5 ani.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: SITE.name,
+      url: SITE.url,
+    },
+    areaServed: [
+      { '@type': 'AdministrativeArea', name: 'Iași' },
+      { '@type': 'AdministrativeArea', name: 'Suceava' },
+      { '@type': 'AdministrativeArea', name: 'Botoșani' },
+      { '@type': 'AdministrativeArea', name: 'Bacău' },
+      { '@type': 'AdministrativeArea', name: 'Neamț' },
+      { '@type': 'AdministrativeArea', name: 'Vaslui' },
+    ],
+    serviceType: isRez ? 'Solar Panel Installation — Residential' : 'Solar Panel Installation — Commercial',
+    offers: {
+      '@type': 'Offer',
+      availability: 'https://schema.org/InStock',
+      areaServed: 'RO',
+    },
+  };
+}
+
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+export function getBreadcrumbSchema(items: BreadcrumbItem[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
