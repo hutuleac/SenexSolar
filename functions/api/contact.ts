@@ -62,7 +62,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
         },
         body: JSON.stringify({
           from: 'Senex Solar Power <onboarding@resend.dev>',
-          to: ['Senexest@gmail.com', 'smart7automation@gmail.com'],
+          to: ['smart7automation@gmail.com'],
           subject: `Cerere ofertă nouă — ${name}`,
           html: `
             <h2>Cerere ofertă nouă de pe site</h2>
