@@ -120,55 +120,59 @@ ARTICLE OUTLINE — Battery Storage Selection Guide (Total: ~1,800 words)
     - Reassurance message: we find the right battery for YOUR situation (not oversell)
 -->
 
-## De ce merită să investești în baterie solară?
+## Introducție: De ce merită să investești în baterii stocare energie panouri solare?
 
-Panourile tale solare lucrează cel mai bine la amiază, dar ce se întâmplă cu energia când se-ntunecă? Fără baterie, 70% din energia solară din vară e pierdută sau trimisă în rețea cu tarif mic. Cu o baterie potrivită, poți folosi acea energie seara, noaptea, și în zilele cloude—transformând un sistem solar într-adevărată independență energetică.
+Panourile tale solare lucrează cel mai bine la amiază, dar ce se întâmplă cu energia când se-ntunecă? Fără baterie, 70% din energia solară de vară e pierdută sau trimisă în rețea la tarif mic (0,50 RON/kWh), în timp ce seara cumperi electricity cu 0,85 RON/kWh. E o pierdere financiară pură.
 
-Pentru proprietarii din Iași, iarna duce la provocări reale: zile scurte (8–9 ore de lumină), iar panourile produc doar 40–50% din puterea de vară. Fără stocare, rămâi dependent de rețea exact când ai nevoie de căldură. O baterie sized corect înseamnă 30–40% mai multă energie folosibilă pe care o controlezi.
+Cu o baterie potrivită, stochezi acea energie de zi pentru seară, noapte și zile noros—transformând un sistem solar într-adevărată independență energetică. Rezultat: mai multă self-consumption, mai puțin grid dependency, mai mult din banii tăi rămân acasă.
 
-Dar alegerea bateriei potrivite nu-i simplă. Lithiu, plumb-acid, hibrid? Fiecare are costuri, beneficii și compromisuri diferite. Acest ghid te va ajuta să înțelegi opțiunile și să iei decizia care se potrivește bugetului și stilului de viață tău.
+Pentru proprietarii din Iași, iarna duce la provocări reale: decembrie–ianuarie au doar 5–6 ore de lumină de vârf, iar panourile produc doar 40–50% din puterea verii. Fără stocare energie, rămâi dependent de rețea exact când ai nevoie de căldură. O baterie sized corect înseamnă 30–40% mai multă energie folosibilă pe care tu o controlezi—nu furnizorul.
+
+Dar alegerea bateriei potrivite nu-i simplă. LiFePO₄, plumb-acid, hibrid? Fiecare are costuri, beneficii și trade-off-uri diferite. Acest ghid te va ajuta să înțelegi opțiunile și să iei decizia care se potrivește bugetului și stilului de viață tău.
 
 ## Tipurile de baterii: Ce trebuie să știi
 
 ### Litiu Fier Fosfat (LiFePO₄) — Alegerea Modernă și Cea Mai Bună
 
-LiFePO₄ e tehnologia de vârf pentru stocare solară rezidențială. E chimicește stabilă, sigură și durează de 8,000–15,000 de cicluri de încărcare–descărcare (10–15 ani în practică).
+LiFePO₄ e tehnologia de vârf pentru stocare energie solară rezidențială. E chimicește stabilă (nu explodează sub stres), sigură și durează 10,000–15,000 de cicluri de încărcare–descărcare. În casă, asta înseamnă 10–15 ani de funcționare zilnică.
 
-**Eficiență:** 95–98% (aproape toată energia pe care o pui rămâne disponibilă când o iei).
+**Eficiență:** 95–98% round-trip (aproape toată energia pe care o pui rămâne disponibilă când o iei). Versus lead-acid care pierde 15–20%.
 
-**Costuri:** €1,200–1,800 pe kWh stocat. Un sistem de 10 kWh costă €12,000–18,000 instalat.
+**Costuri:** €1,200–1,800 pe kWh stocat. Un sistem de 10 kWh costă €12,000–18,000 instalat complet (baterie + BMS + cabluri + labor).
 
-**Garanție:** Fabricanții serioși (LG, BYD, CATL) garantează 10 ani la 80% capacitate.
+**Garanție:** Fabricanții serioși (LG, BYD, CATL) garantează 10 ani la 80% capacitate. Realitate: cu grijă, ți-o ține 15+ ani.
 
-**Potrivit pentru:** Oricine vrea adevărată independență pe termen lung și e dispus să investească în calitate.
+**Potrivit pentru:** Oricine vrea adevărată independență pe termen lung și e dispus să investească în calitate. Homeowners serios, nu backup temporar.
 
-**Dezavantaje:** Cost inițial ridicat. Dacă ai buget mic, pare intimidant.
+**Dezavantaje:** Cost inițial ridicat—dar calculul pe 15 ani schimbă totul.
 
 ### Plumb-Acid (Tradițional) — Opțiunea cu Buget Mic
 
-Tehnologia veche și dovedită. Găsești în orice magazin, ieftin la cumpărare.
+Tehnologia veche și dovedită. Găsești în orice magazin, ieftin la cumpărare. Dar ieftinul se-ntinde pe termen lung.
 
-**Cost:** €300–600 pe kWh (4–5 ori mai ieftin decât lithiu).
+**Cost:** €300–600 pe kWh (4–5 ori mai ieftin decât lithiu upfront).
 
-**Problemă mare:** Durează doar 3–5 ani și trebuie menținute (verificări lunare ale apei distilate, ventilație pentru gaze acide).
+**Problemă mare:** Durează doar 3–5 ani și trebuie menținute (verificări lunare ale apei distilate, ventilație pentru gaze acide, terminaluri curate). Labor + risc = nightmare.
 
-**Eficiență:** 80–85%, și poți folosi doar 50% din capacitate (dacă folosești mai mult, le strici în 1–2 ani).
+**Eficiență:** 80–85%, și poți folosi doar 50% din capacitate (dacă scazi mai mult, le strici în 1–2 ani = triplat cost).
 
-**Garanție:** 2–3 ani tipic.
+**Garanție:** 2–3 ani tipic. După aia, "e vina ta".
 
-**Realitatea:** O baterie de 10 kWh lead-acid cu 50% usable = doar 5 kWh disponibil, costa €3,000–6,000, și o înlocuiești în 5 ani. Total cost 10 ani: €6,000–12,000 (baterii de 2 ori) + mentenanță.
+**Realitatea matematică:** O baterie de 10 kWh lead-acid cu 50% usable = doar 5 kWh disponibil, costă €3,000–6,000, și o înlocuiești în 5 ani. Total cost 10 ani: €6,000–12,000 (bateriile de 2 ori) + mentenanță ore. LiFePO₄ e mai scump la start, mai ieftin la 10 ani.
 
-**Potrivit pentru:** Backup temporar, nu stocare zilnică.
+**Potrivit pentru:** Backup temporar doar (generator + lead-acid mic pentru spate), nu stocare zilnică. Pentru zilele tale de curent zilnic—skip it.
 
 ### Sisteme Hibride/Modulare — Flexibilitate
 
-Combină un pachet de baterii (de obicei LiFePO₄ core) cu sistem de management smart care permite expandare.
+Combină un pachet de baterii (de obicei LiFePO₄ core) cu sistem de management smart care permite expandare graduală. Ideal pentru cei indecișii.
 
-**Avantaj:** Începi mic (5 kWh, €6,000–8,000), adaugi later (încă 5 kWh, €6,000–8,000).
+**Avantaj:** Începi mic (5 kWh, €6,000–8,000), adaugi mai târziu (încă 5 kWh, €6,000–8,000) dacă observi că ai nevoie. Zero risarcă mare upfront.
 
-**Cost:** €1,000–1,500 pe kWh (ușor mai ieftin decât LiFePO₄ monolitic).
+**Cost:** €1,000–1,500 pe kWh (ușor mai ieftin decât LiFePO₄ monolitic datorită economiei scale).
 
-**Potrivit pentru:** Oamenii care nu-s siguri cum va evolua consumul lor, sau care vor să-și testeze sistemul pe faze.
+**Dezavantaj:** Instalație inițială mai complexă, mai mulți inverter, mai mult cablaj.
+
+**Potrivit pentru:** Oamenii care nu-s siguri cum va evolua consumul lor, sau care vor să-și testeze sistemul pe faze. Și cei care vor să-și reducă riscul investiției.
 
 ## Comparația Rapidă — Tabel
 
@@ -185,148 +189,178 @@ Combină un pachet de baterii (de obicei LiFePO₄ core) cu sistem de management
 
 ## Cum Calculezi Ce Dimensiune de Baterie Ai Nevoie?
 
-Nu-i "cât o bate", e "cât e nevoie pentru viața ta".
+Nu-i "cât o bate", e "cât e nevoie pentru **viața ta**".
 
-1. **Consumul zilei:** Household mediu = 15–25 kWh/zi. Verifică-ți facturile.
+**Pasul 1: Consumul zilei**
 
-2. **Cererea de noapte:** Cât consumă casa ta 18:00–06:00? Probabil 6–10 kWh.
+Household mediu Iași = 15–25 kWh/zi. Deschide facturile de la furnizor, ultimele 12 luni. Calculează media lunară ÷ 30 zile.
 
-3. **Zilelicloudeperiod:** Iarnă în Iași = 2–3 zile puternic cloude. Panouri produc 20–30%.
+**Pasul 2: Cererea de noapte**
 
-4. **Formulă simplă:**
-   ```
-   Capacitate baterie = (Cerere noapte × Zile cloude) + Buffer 20% pentru pierderi
-   ```
+Cât consumă casa ta seara + noapte (18:00–06:00)? Pentru familia de 3–4 persoane: 6–10 kWh. Termosifoane, aragaz, televizor, frigider.
 
-5. **Exemplu concret:**
-   - Noapte: 8 kWh
-   - Zile cloude: 3
-   - Total: 8 × 3 = 24 kWh
-   - Cu buffer: 24 × 1.2 = **29 kWh = sistem 25–30 kWh recomandat**
+**Pasul 3: Zilelicloudeperiod și Iași**
 
-Pentru Iași, iarna dă grijă: zile cu 8–9 ore lumină → cerere seară mare → baterie mai mare merită investiția.
+Iarnă în Iași = 2–3 zile puternic cloude. Panourile produc doar 20–30% din normal. Bateria trebuie să-ți acopere asta.
 
-## Analiza Costuri și ROI
+**Pasul 4: Formulă simplă**
+
+```
+Capacitate baterie = (Cerere noapte kWh × Zile cloude consecutive) + Buffer 20%
+```
+
+**Exemplu concret pentru Iași iarnă:**
+- Cerere noapte: 8 kWh
+- Zile cloude: 3 zile (conservator)
+- Total: 8 × 3 = 24 kWh
+- Cu buffer pentru pierderi + degradare: 24 × 1.2 = **29 kWh**
+- Recomandare: Sistem 25–30 kWh
+
+**Pro tip:** Calculul exact îl faci în [calculatorul nostru interactiv](/calculator) — doar introduci factura lunară și ți-l gătim în 2 minute.
+
+Pentru Iași, iarna cere grijă: decembrie–ianuarie au 5–6 ore de lumină de vârf (vs. 16 ore vară). Cererea seară e mare, iar bateria mai mare merită investiția.
+
+## Analiza Costuri și ROI — Cât Recuperezi Investiția?
 
 ### LiFePO₄ 10 kWh (Opțiunea Recomandată)
 
-- **Cost echipament:** €10,000–12,000
-- **Instalare + Electricitate:** €2,000–3,000
-- **Permise + Inspecții:** €200–400
-- **Total:** €12,200–15,400
+**Breakdown complet:**
+- Baterie LiFePO₄ 10 kWh: €3,500
+- BMS (Battery Management System): €500
+- Cabluri, conectori, protecții: €400
+- Instalare (labor electrician): €1,000
+- Permise + inspecție Iași: €300
+- **Total: ~€5,700 EUR** (≈ 27,000–28,000 RON la curs 4,7)
 
-**Economii lunare:** Eviti tarif prost de noapte (~0,80 RON/kWh) pe 8 kWh = 6,40 RON/noapte = ~190 RON/lună = **2,280 RON/an**.
+**Economii lunare:** Eviti import tarif de noapte (~0,85 RON/kWh) pe 8 kWh = 6,80 RON/noapte × 30 nopți = **~200 RON/lună = 2,400 RON/an**.
 
-**Retur:** 15,400 ÷ 2,280 = **6,8 ani payback**.
+**Payback period:** 27,500 ÷ 2,400 = **~11,5 ani** (conservator, fără inflație).
 
-**25 ani total:** 2,280 × 25 = **57,000 RON economii brute** (fără inflație, real va fi mai mult).
+**Economii pe 20 ani:** 2,400 × 20 = **48,000 RON** (brut, după payback = profit pur).
+
+**Bonus:** TBI Bank oferă rate pentru sisteme de stocare. Cote 2026: ~6–7% pe 10 ani = plătești €70–75/lună, economii lunare €190+ = profit lunar încă din luna 1.
 
 ### Lead-Acid 10 kWh (Opțiunea Ieftină)
 
-- **Cost inițial:** €3,000–4,000
-- **Mentenanță 5 ani:** €500–800
-- **Înlocuire după 5 ani:** €3,000–4,000 (din nou)
-- **Total 10 ani:** €6,500–8,800
+- Cost inițial: €2,000–3,000
+- Mentenanță 5 ani (apă distilată, labor): €800
+- Înlocuire după 5 ani (iar €2,500): €2,500
+- **Total 10 ani: ~€5,300** (mai ieftin, dar...)
 
-**Economii:** Doar 5 kWh usable, deci ~1,140 RON/an.
+**Catch:** Doar 50% usable capacity = 5 kWh efectiv. Economii reale: ~1,200 RON/an.
 
-**10 ani cost real:** 6,500–8,800 vs. economic benefit 11,400 = aproape break-even, dar și labor și downtime.
+**Realitate:** 10 ani cost = €5,300, economii 10 ani = €12,000 brut. Pare OK? **Nu.** Ai schimbat bateria odată (labor, downtime, risc install slab), eficiența e 80–85% (pierderi), iar iarna în Iași la -5°C capacitate scade la 70%.
 
-**Verdict:** Lead-acid = teribil ROI pe termen lung. Doar dacă vrei backup mic, nu independență zilnică.
+**Verdict:** Lead-acid = **teribil ROI pe termen lung**. Doar dacă vrei backup mic (generator de curent), nu stocare zilnică.
 
 ## Contextul Local — Iași și Clima Moldaviei
 
-Iași e în Moldavia, zonă cu caracteristici unice pentru energia solară:
+Iași e în Moldavia, zonă cu caracteristici unice pentru energia solară. De asta bateria stocare e **mai critică** aici decât în sud.
 
-**Iarnă scurtă lumina:** Decembrie–Ianuarie = 8–9 ore de lumină (vs. 16 ore vară).
+**Iarnă lumina scurtă:** Decembrie–ianuarie = 5–6 ore de lumină de vârf (vs. 10–12 ore vară). Asta înseamnă ferestre scurte pentru panouri.
 
-**Production iarnă:** Panourile fac 40–50% din puterea de vară.
+**Producție iarnă:** Panourile fac 40–50% din puterea de vară. Rețelă dependență mare, exact când tarifele urcă și vrei independență.
 
-**Demand peak:** Heating season = seara/noapte când soarele-apune (17:00–19:00). Fără baterie, e moment în care rețeaua e saturată și tarifele urcă.
+**Demand peak local:** Sezonul încălzire = seara/noapte când soarele apune (17:00–19:00). Ăla-i moment în care rețeaua e saturată, tarifele urcă, și tu vrei baterie să să-ți acopere. Fără stocare, ești dependent la tarif prost.
 
-**Avantaj local:** Iași are ceruri destul de clare peste an, sarcini industriale mai mici, rețea relativ stabilă.
+**Stabilitate rețea Iași:** În general stabilă (vs. zone rurale cu blackout-uri). Dar independență energetică = pace din punct de vedere psiihic + protecție viitoare contra sporirilor de tarif.
 
-**Incentive:** Programul AFM Casa Verde a promis stocare (2026), detalii încă pending. Planifică devreme dacă vrei granturi.
+**Temperature extremă:** Iași iarna scade la -10°C (rar -15°C). LiFePO₄ handle bine (range -10 la +50°C). Lead-acid în garaj neîncălzit? Capacitate scade 30–40%.
 
-**Implicație practică:** Bateria ta va fi mai utilizată în Iași decât în sudul României, ROI-ul e mai bun.
+**Incentive locale:** Programul AFM Casa Verde 2026 ar putea include stocare (pending). Planifică devreme dacă vrei granturi—cereri timpurii au prioritate.
+
+**Implicație practică:** Bateria ta va fi **mai utilizată și mai valoroasă** în Iași decât în sudul României. ROI-ul e mai bun datorită climatei extreme.
 
 ## Instalare, Plasare și Mentenanță
 
 ### Unde Pui Bateria?
 
-Loc cool și uscat: garaj, subsol, cameră dedicată. Ideal: 15–25°C constant.
+**Ideal:** Loc cool și uscat, temperament constant 15–25°C. Garaj încălzit, subsol sec, cameră dedicată.
 
-Evită: soare direct, umiditate ridicată, locuri cu apa de ploaie.
+**De evitat:** Soare direct (degradare rapidă), umiditate ridicată (oxidare, scurtcircuit), locuri cu apă de ploaie.
+
+**Iași consideration:** Iarna, garajul neîncălzit scade la 0–5°C. LiFePO₄ handle-ază (range -10 la +50°C), dar eficiență scade. Lead-acid în aceste condiții = disaster, capacitate -30%.
 
 ### Instalare și Electricitate
 
-Oricine faci să monteze — trebuie certificat electrician. Bateria se conectează la invertor (invertor hibrid modern = toate-n-unu).
+Oricine faci să monteze **trebuie certificat electrician**. Bateria se conectează la invertor hibrid (invertor modern = toate-n-unu: solar + battery + grid).
 
-Trebuie inspecție electrică în Iași (documentație autorități locale) pentru sistem grid-connected.
+Trebuie **inspecție electrică în Iași** (documentație autorități locale) pentru sistem grid-connected. Fără asta, asigurator zice "nelegul", nu-ți acoperă.
 
-### Mentenanță
+### Mentenanță Reală
 
-**LiFePO₄:** Nulă. BMS (Battery Management System) pe bord gestionează toate. Telefon app să vezi stare.
+**LiFePO₄:** Zero. BMS (Battery Management System) pe bord gestionează voltage, temperatură, cicluri—automat. App pe telefon te informează: stare încărcare, health, histórico cicluri.
 
-**Lead-acid:** Lunar: verific nivel apă, densitate acid, terminaluri clean. Spațiu ventilat (gaze toxice).
+**Lead-acid:** Lunar: verific nivel apă distilată, densitate acid (hidrometru), terminaluri clean, conexiuni strânse. Spațiu ventilat (emit gaze toxice). Labor = groaznic vs. pura passivitate LiFePO₄.
 
-### Garanție
+### Garanție și Lifespan
 
-**LiFePO₄:** 10 ani, 80% capacitate garantată. Bună grijă, ți-o ține 15 ani ușor.
+**LiFePO₄:** 10 ani, 80% capacitate garantată. Real: cu grijă, ți-o ține 15+ ani. După 15 ani: 80% capacity = încă folositoare, doar 2-3 ore mai puțin storage.
 
-**Lead-acid:** 2–3 ani, ieșit. După aia, ingineri îi dau vina pe "abuz" — depășit DoD, temperature extremă, etc.
+**Lead-acid:** 2–3 ani pe hârtie. După aia, fabricant zice "e vina ta"—depășit depth-of-discharge (DoD), temperaturi extreme, maintenance neadecvat.
 
 ## Greșeli Frecvente—Cum Să Eviti
 
-1. **Undersizing:** Baterie prea mica (5 kWh cand ai nevoie de 15 kWh). Result: încă dependent de rețea seara. ROI: slab.
+**Greșeala 1: Undersizing**
+Baterie prea mică (5 kWh când ai nevoie de 15 kWh). Rezultat: încă dependent de rețea seara, importuri scumpe, ROI slab. Economii lunare = irelevanță.
 
-2. **Oversizing:** Baterie 30 kWh cand casa ta consuma 15 kWh/noapte. Niciodată nu se descarcă complet, se degradează mai lent dar costul inițial ridicol.
+**Greșeala 2: Oversizing**
+Baterie 40 kWh când casa consumă 10 kWh/noapte. Niciodată nu se descarcă complet, degradare mai lentă dar cost inițial ridicol (€40,000). Payback: 20 ani.
 
-3. **Lead-acid crezând e economie:** E omenească, e ieftine cand cumperi. Dar la 5 ani, inlocuiești, la 10 ani inlocuiești din nou. Cumulative cost > lithiu.
+**Greșeala 3: Lead-acid "economie"**
+E omenesc să cazi în capcana. Ieftin la cumpărare, dar la 5 ani înlocuiești. La 10 ani înlocuiești din nou. Cumulative cost în 15 ani > LiFePO₄ care ți-o ține 15 ani primera.
 
-4. **Ignoring temperature:** Baterie în garaj neîncălzit iarna (sos -10°C)? Capacitate efectiva scade la 70%, lifespan se taie în jumătate.
+**Greșeala 4: Ignorând temperatura**
+Baterie în garaj neîncălzit iarna (climă Iași, -10°C)? Capacitate efectivă scade 30%, lifespan se taie în jumătate. Lead-acid mai rău: -40% capacity, degradare acceleration.
 
-5. **Zadarnic inspecții electricii:** Faci "DIY" montaj, nu iei permis, vinde casa? Asigurator zice "nelegul", nu te acoperi.
+**Greșeala 5: Skip permise și inspecții**
+DIY montaj fără permis? Vinde casa, asigurator zice "nelegul", nu-ți acoperă daune. Inspecție Iași = €300–400, păstrează peace of mind.
 
-6. **Invertor incompatibil:** Invertor prost ales, bateria nu-i compatibila electric. Arde în garantie, conflict fabricant-installer.
+**Greșeala 6: Invertor incompatibil**
+Invertor prost ales (non-hibrid cu lead-acid), bateria nu-i compatibilă electric. Fire risk, arde în garantie, conflict fabricant-installer.
 
-7. **Plecând de la obicei, nu date reale:** Ai consumat 20 kWh/noapte cand ai 3 copii, acum au plecat. Oversizing din inerție.
+**Greșeala 7: Calcula din obicei, nu date reale**
+Ai consumat 25 kWh/noapte cu 3 copii, acum au plecat. Oversizing din inerție. Verifica facturile lunare reale—ultimi 12 luni.
 
 ## Pasii Următori — Consultație Senex Solar
 
-Gata te-ai învățat teoria? Ora practică.
+Teorie gata? Ora practice.
 
-**1. Audit Energetic Gratuit**
+**Pasul 1: Audit Energetic Gratuit**
 
 Venim la casa ta, măsuram:
-- Expunere acoperiș (orientare, umbre, inclinare)
-- Consumul real (analiza facturi 12 luni)
-- Obiective tale (independență totală? Reduce doar noapte?)
+- Expunere acoperiș (orientare, umbre, inclinare, sud vs. est-vest)
+- Consumul real (analiza facturile 12 luni, seasonal patterns)
+- Obiective tale (independență totală 24/7? Reduce doar noapte?)
 
-**2. Sizing Custom**
+**Pasul 2: Sizing Custom**
 
-Nu "suportem 10 kWh", facem calcul real pentru ÎN TA CASĂ, iarna Iași.
+Nu zicim "recomandăm 10 kWh și gata". Facem calcul real pentru **ÎN TA CASĂ**, ținând cont de iarna din Iași, zilelicloude, cererea ta de seară.
 
-**3. Cost Transparent**
+**Pasul 3: Cost Transparent**
 
-Baterie + invertor + panou + labor + permise—fiecare linie.
+Baterie + BMS + invertor + cablaje + labor + permise + inspecție—fiecare linie, zero surprize. Comparativ: LiFePO₄ vs. lead-acid vs. hibrid.
 
-**4. Plan Finanțare**
+**Pasul 4: Plan Finanțare**
 
-TBI Bank rate, timpi plată, și daca AFM deschide 2026, prioritate aplicație devreme.
+Credite TBI Bank pe 10 ani, rate lunare, și dacă AFM deschide granturi 2026, te ajutam cu aplicație devreme. Grant eligibilitate = prioritate în planificare.
 
-**5. Timeline**
+**Pasul 5: Timeline Clar**
 
-De obicei: acord → comanda → livrare (2 săptămâni) → instalare (3–5 zile) → punere în funcțiune.
+Acord → comandă → livrare (2 săptămâni) → instalare (3–5 zile, weekend-uri posible) → punere în funcțiune + training app.
 
-## Gata? Cerere Analiză Gratuită
+## Gata? Solicită Analiză Gratuită
 
-Fiecare situație e unică. Unii au nevoie LiFePO₄ instant. Alții: start solar, bateria în 3 ani cand grant-uri revin. Noi e suntem aici să ți dăm opțiunea care-ți face sens.
+Fiecare situație e unică. Unii au nevoie LiFePO₄ instant. Alții: start solar, bateria în 3 ani când grant-uri revin. Noi suntem aici să ți dăm opțiunea care-ți face sens **ÎN TA SITUAȚIE**.
 
-**Clic "Solicită Analiza Gratuită" sub.**
+**CTA Button: "Solicită Analiza Gratuită"** (fără obligație)
 
-Nu-i vânzare agresivă—doar conversație onestă despre ce-ți trebuie. 200+ oameni din Iași au ales deja. Tu cu cine rămâi?
+Nu-i vânzare agresivă—doar conversație onestă despre ce-ți trebuie. 200+ oameni din Iași și jur au ales Senex Solar deja. Răspuns în 24 de ore. Sau sună direct: **0754 457 239**.
+
+**Bonus:** Dacă și tu ai mașină electrică acasă, bateria solară devine și mai valoroasă. Citește ghidul nostru complet: [Panouri Solare + Încărcare Mașină Electrică la Iași](/blog/panouri-solare-masina-electrica-iasi).
+
+Ce curbezi dacă aștepți? Tarifele la curent continuă să urce, iar granturi din 2026 pot dispărea rapid. Planificarea devreme = opțiuni mai bune + payback mai lung.
 
 ---
 
-*Curent la data: aprilie 2026. Informații despre granturi/AFM sunt estimate. Verifică [senexsolar.ro](/) pentru actualizări.*
+**Curent la data: aprilie 2026.** Informații despre granturi/AFM sunt estimate pe baza anunțurilor 2025. Verifică [senexsolar.ro](/) pentru actualizări.
