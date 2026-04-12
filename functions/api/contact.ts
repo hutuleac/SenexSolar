@@ -5,10 +5,12 @@ const schema = z.object({
   phone: z.string().min(10),
   billAmount: z.number().min(50).max(10000),
   propertyType: z.enum(['casa', 'firma', 'apartament']),
+  turnstileToken: z.string().min(1),
 });
 
 interface Env {
   RESEND_API_KEY?: string;
+  TURNSTILE_SECRET_KEY?: string;
 }
 
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
@@ -23,7 +25,30 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
       );
     }
 
-    const { name, phone, billAmount, propertyType } = result.data;
+    const { name, phone, billAmount, propertyType, turnstileToken } = result.data;
+
+    // Validate Turnstile token
+    if (env.TURNSTILE_SECRET_KEY) {
+      const tsRes = await fetch(
+        'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            secret: env.TURNSTILE_SECRET_KEY,
+            response: turnstileToken,
+            remoteip: request.headers.get('CF-Connecting-IP') ?? undefined,
+          }),
+        }
+      );
+      const tsResult = await tsRes.json() as { success: boolean };
+      if (!tsResult.success) {
+        return Response.json(
+          { success: false, error: 'Verificare CAPTCHA eșuată. Reîncercați.' },
+          { status: 400 }
+        );
+      }
+    }
 
     // Send email via Resend if API key is configured
     if (env.RESEND_API_KEY) {
@@ -37,8 +62,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
         },
         body: JSON.stringify({
           from: 'Senex Solar Power <noreply@senexsolarpower.ro>',
-          to: ['contact@senexsolarpower.ro'],
-          reply_to: undefined,
+          to: ['Senexest@gmail.com', 'smart7automation@gmail.com'],
           subject: `Cerere ofertă nouă — ${name}`,
           html: `
             <h2>Cerere ofertă nouă de pe site</h2>
