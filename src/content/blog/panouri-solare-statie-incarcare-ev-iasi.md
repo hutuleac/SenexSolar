@@ -115,7 +115,7 @@ Cinci motive concrete pentru a investi în **panouri solare cu stație de încă
 
 **Opțiuni de finanțare ușoare.** TBI Bank oferă rate 0% pentru primii 12 luni. Asta înseamnă: 20.000 RON sistem, 250 RON economie/lună = 80 luni recuperare fără rate. Cu finanțare, rata (333 EUR/lună) se echilibrează cu economia. În anul 2, e gratis.
 
-**Perspective pentru viitor.** AFM Casa Verde se va deschide din nou în toamna 2026. Cine instala acum se poziționează pentru grant. Regiunile cu climă favorabilă cum e Moldavia au fonduri dirijate pentru renovări verzi.
+**Perspective pentru viitor.** AFM Casa Verde se va deschide din nou în toamna 2026. Cine instala acum se poziționează pentru grant. Regiunile cu climă favorabilă cum e Moldavia au fonduri dirijate pentru renovări verzi. Și dacă vrei și stocarea energiei produse, citește ghidul complet [cum să alegi bateria potrivită](/blog/baterii-stocare-energie-panouri-solare-iasi).
 
 ## Cum funcționează sistemul — de la panouri la mașina ta
 

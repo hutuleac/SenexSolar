@@ -357,7 +357,7 @@ Fiecare situație e unică. Unii au nevoie LiFePO₄ instant. Alții: start sola
 
 Nu-i vânzare agresivă—doar conversație onestă despre ce-ți trebuie. 200+ oameni din Iași și jur au ales Senex Solar deja. Răspuns în 24 de ore. Sau sună direct: **0754 457 239**.
 
-**Bonus:** Dacă și tu ai mașină electrică acasă, bateria solară devine și mai valoroasă. Citește ghidul nostru complet: [Panouri Solare + Încărcare Mașină Electrică la Iași](/blog/panouri-solare-masina-electrica-iasi).
+**Bonus:** Dacă și tu ai mașină electrică acasă, bateria solară devine și mai valoroasă. Combinația cu panouri solare e și mai profitabilă — vezi articolul despre [solar + stații EV](/blog/panouri-solare-statie-incarcare-ev-iasi).
 
 Ce curbezi dacă aștepți? Tarifele la curent continuă să urce, iar granturi din 2026 pot dispărea rapid. Planificarea devreme = opțiuni mai bune + payback mai lung.
 
