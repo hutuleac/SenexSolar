@@ -66,7 +66,7 @@ export function ContactForm() {
             </svg>
           </div>
           <h3>Mesajul a fost primit!</h3>
-          <p>Vă vom contacta în maxim 24 de ore pentru a stabili analiza gratuită.</p>
+          <p>Am primit solicitarea ta. Te vom contacta în curând pentru analiza gratuită.</p>
         </motion.div>
       ) : (
         <motion.form
