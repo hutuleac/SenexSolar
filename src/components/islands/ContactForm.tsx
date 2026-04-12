@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { AnimatePresence, motion } from 'motion/react';
+import { Turnstile } from '@marsidev/react-turnstile';
 
 const schema = z.object({
   name: z.string().min(2, 'Introduceți numele (minim 2 caractere)'),
@@ -17,6 +18,7 @@ type FormData = z.infer<typeof schema>;
 
 export function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const {
     register,
@@ -25,12 +27,13 @@ export function ContactForm() {
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const onSubmit = async (data: FormData) => {
+    if (!turnstileToken) return;
     setStatus('loading');
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, turnstileToken }),
       });
       if (res.ok) {
         setStatus('success');
@@ -133,10 +136,18 @@ export function ContactForm() {
             Datele tale sunt confidențiale. Nu spam, nu apeluri repetate — doar informații utile.
           </p>
 
+          <Turnstile
+            siteKey="0x4AAAAAAC8Z8HBQ2LEWhhKy"
+            onSuccess={setTurnstileToken}
+            onError={() => setTurnstileToken(null)}
+            onExpire={() => setTurnstileToken(null)}
+            options={{ theme: 'light', language: 'ro' }}
+          />
+
           <button
             type="submit"
             className="form-submit"
-            disabled={status === 'loading'}
+            disabled={status === 'loading' || !turnstileToken}
           >
             {status === 'loading' ? (
               <>
