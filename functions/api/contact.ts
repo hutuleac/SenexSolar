@@ -61,7 +61,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          from: 'Senex Solar Power <noreply@senexsolarpower.ro>',
+          from: 'Senex Solar Power <onboarding@resend.dev>',
           to: ['Senexest@gmail.com', 'smart7automation@gmail.com'],
           subject: `Cerere ofertă nouă — ${name}`,
           html: `
