@@ -1,6 +1,6 @@
 ---
 import { SITE } from '../lib/constants';
-import { getLocalBusinessSchema, getOrganizationSchema } from '../lib/schema';
+import { getLocalBusinessSchema, getOrganizationSchema, getWebSiteSchema } from '../lib/schema';
 import '../styles/global.css';
 
 export interface Props {
@@ -27,9 +27,11 @@ const ogImage = new URL(image, SITE.url);
 
 const localBusinessSchema = getLocalBusinessSchema();
 const organizationSchema = getOrganizationSchema();
+const webSiteSchema = getWebSiteSchema();
 const schemas = [
   localBusinessSchema,
   organizationSchema,
+  webSiteSchema,
   ...(schema ? (Array.isArray(schema) ? schema : [schema]) : []),
 ];
 ---

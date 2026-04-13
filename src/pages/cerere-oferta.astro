@@ -3,12 +3,19 @@ export const prerender = true;
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { ContactForm } from '../components/islands/ContactForm';
 import { SITE } from '../lib/constants';
+import { getBreadcrumbSchema } from '../lib/schema';
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Acasă', url: 'https://senexsolar.pages.dev' },
+  { name: 'Cerere Ofertă', url: 'https://senexsolar.pages.dev/cerere-oferta' },
+]);
 ---
 
 <BaseLayout
   title="Cerere Ofertă Panouri Solare Iași — Senex Solar"
   description="Solicită ofertă gratuită pentru panouri solare în Iași. Completează formularul și primești calculul de economii și opțiuni de finanțare."
   noindex={false}
+  schema={breadcrumbSchema}
 >
   <!-- Minimal page — no header nav, conversion focused -->
   <div class="co-page">

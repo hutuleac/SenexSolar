@@ -5,7 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/layout/Header.astro';
 import Footer from '../../components/layout/Footer.astro';
 import WhatsAppButton from '../../components/layout/WhatsAppButton.astro';
-import { getBlogPostSchema } from '../../lib/schema';
+import { getBlogPostSchema, getBreadcrumbSchema } from '../../lib/schema';
 import { SITE } from '../../lib/constants';
 
 export async function getStaticPaths() {
@@ -24,13 +24,18 @@ const blogSchema = getBlogPostSchema({
   publishDate: post.data.publishDate,
   url: new URL(`/blog/${post.id}`, SITE.url).toString(),
 });
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Acasă', url: 'https://senexsolar.pages.dev' },
+  { name: 'Blog', url: 'https://senexsolar.pages.dev/blog' },
+  { name: post.data.title, url: `https://senexsolar.pages.dev/blog/${post.id}` },
+]);
 ---
 
 <BaseLayout
   title={post.data.title}
   description={post.data.description}
   publishDate={post.data.publishDate}
-  schema={blogSchema}
+  schema={[blogSchema, breadcrumbSchema]}
 >
   <Header />
   <main>

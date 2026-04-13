@@ -7,11 +7,23 @@ import WhatsAppButton from '../components/layout/WhatsAppButton.astro';
 import Calculator from '../components/sections/Calculator.astro';
 import ContactCTA from '../components/sections/ContactCTA.astro';
 import PartnerLogos from '../components/sections/PartnerLogos.astro';
+import { getServiceSchema, getBreadcrumbSchema, getFAQSchema } from '../lib/schema';
+
+const serviceSchema = getServiceSchema('comercial');
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Acasă', url: 'https://senexsolar.pages.dev' },
+  { name: 'Comercial', url: 'https://senexsolar.pages.dev/comercial' },
+]);
+const faqSchema = getFAQSchema([
+  { question: 'Care este ROI-ul pentru un sistem fotovoltaic comercial?', answer: 'Pentru firme, payback-ul este de obicei 3–5 ani, cu economii de 70–90% la factura de energie.' },
+  { question: 'Puteți instala pe hale industriale mari?', answer: 'Da, instalăm sisteme de la 10 kWp până la 500+ kWp pe orice tip de hală sau spațiu comercial.' },
+]);
 ---
 
 <BaseLayout
   title="Panouri Solare Comerciale Iași — Firme și Hale"
   description="Sisteme fotovoltaice 10–500 kWp pentru firme și hale din Iași. Reducere facturi cu 70–90%, ROI 3–5 ani. Ofertă personalizată gratuită."
+  schema={[serviceSchema, breadcrumbSchema, faqSchema]}
 >
   <Header />
   <main>

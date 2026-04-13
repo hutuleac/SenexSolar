@@ -10,11 +10,24 @@ import Subsidies from '../components/sections/Subsidies.astro';
 import CaseStudies from '../components/sections/CaseStudies.astro';
 import ContactCTA from '../components/sections/ContactCTA.astro';
 import PartnerLogos from '../components/sections/PartnerLogos.astro';
+import { getServiceSchema, getBreadcrumbSchema, getFAQSchema } from '../lib/schema';
+
+const serviceSchema = getServiceSchema('rezidential');
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Acasă', url: 'https://senexsolar.pages.dev' },
+  { name: 'Rezidențial', url: 'https://senexsolar.pages.dev/rezidential' },
+]);
+const faqSchema = getFAQSchema([
+  { question: 'Ce putere de sistem am nevoie pentru casă?', answer: 'Pentru o casă cu factură de 200–400 RON/lună, un sistem de 3–5 kWp este suficient. Calculatorul nostru gratuit îți dă răspunsul exact.' },
+  { question: 'Pot instala panouri solare pe orice tip de acoperiș?', answer: 'Da — montăm pe țiglă, tablă, bitum sau acoperiș plat. Structura de montaj se adaptează la orice tip.' },
+  { question: 'Ce se întâmplă dacă produc mai multă energie decât consum?', answer: 'Surplusul merge în rețea și îți este compensat (prosumator). Poți și stoca energia în baterii.' },
+]);
 ---
 
 <BaseLayout
   title="Panouri Solare Rezidențiale Iași — Case și Vile"
   description="Sisteme fotovoltaice 3–15 kWp pentru case din Iași. Instalare completă, finanțare rate TBI Bank, grant AFM Casa Verde. Analiză gratuită."
+  schema={[serviceSchema, breadcrumbSchema, faqSchema]}
 >
   <Header />
   <main>

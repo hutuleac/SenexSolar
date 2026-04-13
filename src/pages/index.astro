@@ -17,11 +17,23 @@ import About from '../components/sections/About.astro';
 import PartnerLogos from '../components/sections/PartnerLogos.astro';
 import FAQ from '../components/sections/FAQ.astro';
 import ContactCTA from '../components/sections/ContactCTA.astro';
+import { getFAQSchema, getBreadcrumbSchema } from '../lib/schema';
+
+const faqSchema = getFAQSchema([
+  { question: 'Cât costă un sistem fotovoltaic în Iași?', answer: 'Un sistem rezidențial complet instalat costă între 18.000 și 40.000 RON în funcție de putere (3–8 kWp). Poți finanța prin rate TBI Bank.' },
+  { question: 'Cât durează instalarea panourilor solare?', answer: 'Instalarea unui sistem rezidențial durează 1–2 zile. Racordarea la rețea (ANRE) poate dura 2–4 săptămâni suplimentar.' },
+  { question: 'Ce garanție oferă Senex Solar Power?', answer: 'Oferim garanție 25 ani pentru panouri, 10+ ani pentru invertor și garanție de performanță pe întreaga perioadă.' },
+  { question: 'Pot accesa grantul AFM Casa Verde?', answer: 'Da, dacă te califici. Grantul AFM Casa Verde oferă 20.000 RON nerambursabili. Senex Solar te ajută cu întregul dosar.' },
+]);
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Acasă', url: 'https://senexsolar.pages.dev' },
+]);
 ---
 
 <BaseLayout
   title="Instalare Panouri Solare Iași — Sisteme Fotovoltaice"
   description="Instalare panouri fotovoltaice în Iași, Suceava, Botoșani, Bacău, Neamț, Vaslui. Rate TBI Bank, garanție 25 ani. Analiză gratuită."
+  schema={[faqSchema, breadcrumbSchema]}
 >
   <Header />
   <main>

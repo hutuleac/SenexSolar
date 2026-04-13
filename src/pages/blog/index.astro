@@ -5,14 +5,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/layout/Header.astro';
 import Footer from '../../components/layout/Footer.astro';
 import WhatsAppButton from '../../components/layout/WhatsAppButton.astro';
+import { getBreadcrumbSchema } from '../../lib/schema';
 
 const posts = await getCollection('blog');
 const sorted = posts.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Acasă', url: 'https://senexsolar.pages.dev' },
+  { name: 'Blog', url: 'https://senexsolar.pages.dev/blog' },
+]);
 ---
 
 <BaseLayout
   title="Blog Solar Iași — Sfaturi și Ghiduri Fotovoltaice"
   description="Articole despre panouri solare, stocarea energiei, vehicule electrice și subvenții AFM. Ghiduri practice pentru proprietari din Iași."
+  schema={breadcrumbSchema}
 >
   <Header />
   <main>

@@ -5,11 +5,18 @@ import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 import WhatsAppButton from '../components/layout/WhatsAppButton.astro';
 import ContactCTA from '../components/sections/ContactCTA.astro';
+import { getBreadcrumbSchema } from '../lib/schema';
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Acasă', url: 'https://senexsolar.pages.dev' },
+  { name: 'Contact', url: 'https://senexsolar.pages.dev/contact' },
+]);
 ---
 
 <BaseLayout
   title="Contact Senex Solar Power Iași — Analiză Gratuită"
   description="Contactează Senex Solar Power din Iași. Telefon, WhatsApp, email. Analiză gratuită fără obligații. Program L–V 8:00–18:00, Sâmbătă 9:00–14:00."
+  schema={breadcrumbSchema}
 >
   <Header />
   <main>
